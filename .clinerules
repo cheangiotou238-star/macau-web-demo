@@ -1,0 +1,38 @@
+# 澳門本地商戶單頁網站（Macau Local Merchant Single-Page Website）開發規則
+
+## 1. 響應式設計（RWD）— 手機優先（Mobile-First）【強制】
+- 一律以「手機版」為主要設計基準，再透過 min-width 斷點逐步增強至平板與桌面。
+- 使用相對單位（rem / % / vw / vh）與流體佈局（CSS Grid / Flexbox），禁止使用固定像素寬度作為版心。
+- 圖片與媒體必須響應式：`max-width: 100%; height: auto;`，並以 `srcset` / `<picture>` 提供不同解析度。
+- 觸控目標（按鈕、連結）最小 44×44px，確保手機操作便利。
+- 每個區塊必須在 375px 寬度下測試無水平捲軸（overflow-x: hidden 作為防護）。
+
+## 2. 語言與在地化（Language & Localization）【強制】
+- 預設語言為「繁體中文」（Traditional Chinese），作為主要內容語言。
+- 頁面結構必須預留「英文（English）」與「葡文（Português）」切換能力：
+  - 使用 i18n 結構或以 `data-*` 屬性標記可翻譯文字，避免將文字硬編碼於 JavaScript 邏輯中。
+  - 預設 `<html lang="zh-Hant">`，切換語系時動態更新 `lang` 屬性。
+  - 提供語系切換器（下拉選單或按鈕），並將使用者選擇存入 `localStorage`。
+- 日期、價格、電話格式需符合澳門本地習慣（電話採 +853 格式、必要時提供葡文輔助標示）。
+
+## 3. WhatsApp 浮動預約按鈕（Fixed Booking Button）【強制】
+- 右下角固定顯示浮動預約按鈕，連結一律指向 `https://wa.me/853`（可再接商家電話號碼，如 `https://wa.me/853XXXXXXXX`）。
+- 樣式必須：`position: fixed; right: 16px; bottom: 16px;` 且 `z-index` 高於其他內容。
+- 按鈕須具備：WhatsApp 官方綠底色（#25D366）、白色 WhatsApp 圖示、懸停/點擊回饋、柔和陰影。
+- 手機版不可遮擋主要內容，桌面版可放大但位置保持右下。
+- 提供 `aria-label`（如「透過 WhatsApp 預約」）確保無障礙。
+
+## 4. 單頁網站結構（Single-Page）
+- 內容以錨點區塊（`<section>`）呈現，提供平滑滾動與頂部/漢堡選單導航。
+- 建議區塊順序：首頁橫幅（Hero）→ 關於我們 → 服務/菜單 → 價目/預約 → 聯絡與地圖。
+- 地圖使用內嵌 iframe（Google Maps / 澳門地圖），並顯示地址與營業時間。
+
+## 5. 效能與 SEO
+- 首屏內容優先載入，非關鍵資源延遲載入（lazy loading）。
+- 提供結構化資料（Schema.org `LocalBusiness`），含 `name`、`telephone`（+853）、`address`。
+- 壓縮圖片（WebP），並設定正確的 `meta description` 與 Open Graph 標籤。
+
+## 6. 技術與程式碼規範
+- 使用語意化 HTML5 標籤（`header`/`nav`/`main`/`section`/`footer`）。
+- CSS 使用自訂屬性（CSS variables）管理主題色，保持澳門商戶的視覺一致性。
+- 保持無障礙（a11y）：對比度、焦點樣式、`alt` 文字。

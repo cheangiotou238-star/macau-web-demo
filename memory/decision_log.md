@@ -1,5 +1,5 @@
 # 決策記錄（Decision Log）
 
 - 2026/11/17：建立專案 `.clinerules`（RWD 手機優先、繁中為主預留英/葡、WhatsApp 浮動預約按鈕）。
-- 2026/11/17：於 `cline_mcp_settings.json` 安裝 `fetch` MCP Server（`uvx mcp-server-fetch`）。
-- 待辦：初始化 Git 倉庫並設定遠端。
+- 2026/11/17：本機未安裝 `uv`，將 `fetch` MCP 由 `uvx mcp-server-fetch` 改為 `npx mcp-server-fetch`。
+- 2026/11/17：初始化 Git（預設分支 `main`）、綁定遠端 `origin`，以 `gh` CLI 建立公開倉庫並完成首次 Commit 與 Push。

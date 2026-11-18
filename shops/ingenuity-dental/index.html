@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>匠心牙科中心 | 澳門皇朝區專業牙科診所</title>
-  <meta name="description" content="匠心牙科中心（Ingenuity Dental Center）位於澳門皇朝區宋玉生廣場，提供人工植牙、齒列矯正、全口重建、冷光美白、精密假牙、牙周病治療、根管治療、補牙、兒童牙科及家庭牙醫服務，Google 5.0 星滿分評價，設無障礙設施，採預約優先制，歡迎透過 WhatsApp 預約。">
-  <meta property="og:title" content="匠心牙科中心 | 澳門皇朝區專業牙科診所">
-  <meta property="og:description" content="澳門皇朝區專業牙科診所，人工植牙、齒列矯正、冷光美白等全方位牙科服務，Google 5.0 星滿分評價，WhatsApp 預約優先。">
+  <title>Artisan Dental | 澳門專業牙科診所</title>
+  <meta name="description" content="Artisan Dental（匠心牙科）位於澳門宋玉生廣場258號建興龍廣場9樓B座，提供人工植牙、齒列矯正、全口重建、冷光美白、精密假牙、牙周病治療、根管治療、補牙、兒童牙科及家庭牙醫服務，Google 5.0 星滿分評價，採預約優先制，歡迎透過 WhatsApp 預約。">
+  <meta property="og:title" content="Artisan Dental | 澳門專業牙科診所">
+  <meta property="og:description" content="Artisan Dental（匠心牙科）位於澳門宋玉生廣場258號建興龍廣場9樓B座，人工植牙、齒列矯正、冷光美白等全方位牙科服務，Google 5.0 星滿分評價，WhatsApp 預約優先。">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_Hant">
   <meta property="og:url" content="https://cheangiotou238-star.github.io/macau-web-demo/shops/ingenuity-dental/">
@@ -14,17 +14,22 @@
   {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "Dentist"],
-    "name": "匠心牙科中心",
-    "alternateName": "Ingenuity Dental Center",
+    "name": "Artisan Dental",
+    "alternateName": "匠心牙科中心",
     "telephone": "+85368254553",
+    "email": "artisandental.macau@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "澳門宋玉生廣場258號9樓",
+      "streetAddress": "澳門宋玉生廣場258號建興龍廣場9樓B座",
       "addressLocality": "澳門",
       "addressCountry": "MO"
     },
     "openingHours": "Mo-Su 10:00-19:00",
     "url": "https://cheangiotou238-star.github.io/macau-web-demo/shops/ingenuity-dental/",
+    "sameAs": [
+      "https://www.facebook.com/ArtisanDental.Macau/",
+      "https://www.instagram.com/artisandental.mo/"
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
@@ -122,9 +127,10 @@
 
     .navbar {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 0.75rem 1rem;
       padding-block: 0.75rem;
     }
 
@@ -212,10 +218,13 @@
       color: var(--color-primary-dark);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       .nav-toggle { display: none; }
-      .site-nav { display: block; width: auto; }
-      .site-nav ul { flex-direction: row; padding: 0; }
+      .site-nav { display: block; width: auto; flex: 1 1 auto; }
+      .site-nav ul { flex-direction: row; justify-content: center; padding: 0; gap: 0.5rem; }
+      .site-nav a { padding: 0.5rem 0.6rem; }
+      .brand { flex: 0 0 auto; }
+      .nav-controls { flex: 0 0 auto; }
     }
 
         /* Hero */
@@ -431,6 +440,30 @@
     .contact-item span,
     .contact-item a { color: var(--color-text-muted); text-decoration: none; }
 
+    .copy-address {
+      align-self: flex-start;
+      margin-top: 0.35rem;
+      min-height: 40px;
+      padding: 0.4rem 0.85rem;
+      border: 1px solid var(--color-primary);
+      border-radius: 8px;
+      background: var(--color-surface);
+      color: var(--color-primary-dark);
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .copy-address:hover { background: var(--color-primary-light); }
+
+    .copy-address.copied {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #ffffff;
+    }
+
     .map-frame {
       width: 100%;
       height: 300px;
@@ -560,16 +593,7 @@
       border: none;
     }
 
-    .form-success {
-      margin-top: 1rem;
-      padding: 0.85rem 1rem;
-      background: var(--color-primary-light);
-      color: var(--color-primary-dark);
-      border-radius: 8px;
-      font-weight: 600;
-    }
-
-    .btn-whatsapp-fallback {
+    .btn-email-booking {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -577,18 +601,18 @@
       min-height: 44px;
       margin-top: 0.75rem;
       padding: 0.7rem 1rem;
-      border: 1px solid var(--color-accent);
+      border: 1px solid var(--color-primary);
       border-radius: 999px;
       background: #ffffff;
-      color: var(--color-accent-dark);
+      color: var(--color-primary-dark);
       font-weight: 600;
       cursor: pointer;
       transition: background 0.15s ease, color 0.15s ease;
     }
 
-    .btn-whatsapp-fallback:hover {
-      background: var(--color-accent);
-      color: #ffffff;
+    .btn-email-booking:hover {
+      background: var(--color-primary-light);
+      color: var(--color-primary-dark);
     }
 
     /* Social buttons */
@@ -631,88 +655,12 @@
     }
 
     .social-btn.facebook { background: #1877f2; }
-    .social-btn.wechat { background: #07c160; }
-    .social-btn.xiaohongshu { background: #ff2442; }
+    .social-btn.instagram { background: #e1306c; }
 
     .site-footer .social-links {
       justify-content: center;
       margin-top: 0;
       margin-bottom: 1rem;
-    }
-
-    /* WeChat modal */
-    .modal {
-      position: fixed;
-      inset: 0;
-      z-index: 1200;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1.25rem;
-    }
-
-    .modal[hidden] { display: none; }
-
-    .modal-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.55);
-    }
-
-    .modal-dialog {
-      position: relative;
-      width: 100%;
-      max-width: 320px;
-      background: var(--color-surface);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
-      width: 44px;
-      height: 44px;
-      border: none;
-      border-radius: 8px;
-      background: transparent;
-      color: var(--color-text-muted);
-      font-size: 1.6rem;
-      line-height: 1;
-      cursor: pointer;
-    }
-
-    .modal-close:hover {
-      background: var(--color-primary-light);
-      color: var(--color-primary-dark);
-    }
-
-    .modal-dialog h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-    }
-
-    .modal-dialog p {
-      color: var(--color-text-muted);
-      margin-bottom: 1.25rem;
-    }
-
-    .qr-placeholder {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.75rem;
-      background: #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-    }
-
-    .qr-svg {
-      width: 180px;
-      height: 180px;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -725,7 +673,16 @@
 <body>
   <header class="site-header">
     <div class="container navbar">
-      <a class="brand" href="#hero" data-i18n="brand.name">匠心牙科中心</a>
+      <a class="brand" href="#hero" data-i18n="brand.name">Artisan Dental</a>
+      <nav class="site-nav" id="site-nav" data-i18n-aria="nav.label" aria-label="主要導覽">
+        <ul>
+          <li><a href="#about" data-i18n="nav.about">關於我們</a></li>
+          <li><a href="#services" data-i18n="nav.services">服務項目</a></li>
+          <li><a href="#reviews" data-i18n="nav.reviews">顧客好評</a></li>
+          <li><a href="#pricing" data-i18n="nav.pricing">價目/預約</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">聯絡與地圖</a></li>
+        </ul>
+      </nav>
       <div class="nav-controls">
         <label class="visually-hidden" for="lang-switch" data-i18n="lang.label">選擇語言</label>
         <select id="lang-switch" class="lang-switch">
@@ -738,24 +695,13 @@
         </button>
       </div>
     </div>
-    <nav class="site-nav" id="site-nav" data-i18n-aria="nav.label" aria-label="主要導覽">
-      <div class="container">
-        <ul>
-          <li><a href="#about" data-i18n="nav.about">關於我們</a></li>
-          <li><a href="#services" data-i18n="nav.services">服務項目</a></li>
-          <li><a href="#reviews" data-i18n="nav.reviews">顧客好評</a></li>
-          <li><a href="#pricing" data-i18n="nav.pricing">價目/預約</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">聯絡與地圖</a></li>
-        </ul>
-      </div>
-    </nav>
   </header>
 
   <main>
     <section id="hero" class="hero">
       <div class="container hero-inner">
-        <span class="hero-tagline" data-i18n="hero.tagline">澳門皇朝區專業牙科診所</span>
-        <h1 data-i18n="hero.title">匠心牙科中心</h1>
+        <span class="hero-tagline" data-i18n="hero.tagline">ArtisanDental.mo · 澳門專業牙科診所</span>
+        <h1 data-i18n="hero.title">Artisan Dental</h1>
         <p data-i18n="hero.subtitle">人工植牙、齒列矯正、全口重建等全方位牙科服務，Google 5.0 星滿分評價，採預約優先制，細心守護您的笑容。</p>
         <a class="btn btn-primary" href="https://wa.me/85368254553" data-i18n="hero.cta">WhatsApp 立即預約</a>
       </div>
@@ -766,7 +712,7 @@
         <h2 class="section-title" data-i18n="about.title">關於我們</h2>
         <div class="about-grid">
           <div class="about-text">
-            <p data-i18n="about.text1">匠心牙科中心坐落於澳門皇朝區宋玉生廣場，秉持「以匠心守護每一顆牙齒」的理念，提供人工植牙、齒列矯正、全口重建等全方位牙科服務。</p>
+            <p data-i18n="about.text1">Artisan Dental 坐落於澳門宋玉生廣場258號建興龍廣場9樓B座，秉持「以匠心守護每一顆牙齒」的理念，提供人工植牙、齒列矯正、全口重建等全方位牙科服務。</p>
             <p data-i18n="about.text2">我們注重細心與專業的醫療品質，設有無障礙設施，並採預約優先制，讓每位顧客都能在舒適安心的環境中獲得妥善照護。</p>
             <p data-i18n="about.text3">Google 5.0 星滿分評價，是街坊與家庭信賴的牙科夥伴。</p>
           </div>
@@ -774,7 +720,7 @@
             <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
                  srcset="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80 1200w"
                  sizes="(max-width: 767px) 100vw, 50vw"
-                 alt="匠心牙科中心診所環境" data-i18n-alt="about.imageAlt"
+                 alt="Artisan Dental 診所環境" data-i18n-alt="about.imageAlt"
                  width="1200" height="900" loading="lazy" decoding="async">
           </div>
         </div>
@@ -895,7 +841,7 @@
 
         <div class="booking-form">
           <h3 class="booking-form-title" data-i18n="form.title">線上快速預約</h3>
-          <p class="booking-form-subtitle" data-i18n="form.subtitle">填寫以下資料，我們將盡快與您聯繫確認</p>
+          <p class="booking-form-subtitle" data-i18n="form.subtitle">填寫資料後，將直接透過 WhatsApp 或 Email 傳送預約給我們</p>
           <form id="booking-form" novalidate>
             <div class="form-row">
               <div class="form-field">
@@ -928,9 +874,8 @@
               <label for="bf-note" data-i18n="form.note">備註</label>
               <textarea id="bf-note" name="note" rows="3" data-i18n-placeholder="form.notePlaceholder" placeholder="請簡述您的需求（選填）"></textarea>
             </div>
-            <button type="submit" class="btn btn-secondary" data-i18n="form.submit">送出預約申請</button>
-            <p class="form-success" id="booking-form-success" role="status" data-i18n="form.success" hidden>預約申請已送出，專人將盡快與您聯繫</p>
-            <button type="button" class="btn-whatsapp-fallback" id="booking-whatsapp-fallback" data-i18n="form.whatsappFallback" hidden>改用 WhatsApp 直接發送此資料</button>
+            <button type="submit" class="btn btn-secondary" data-i18n="form.submit">立即透過 WhatsApp 預約</button>
+            <button type="button" class="btn-email-booking" id="booking-email" data-i18n="form.email">改用 Email 傳送預約</button>
           </form>
         </div>
       </div>
@@ -943,11 +888,16 @@
           <div class="contact-info">
             <div class="contact-item">
               <strong data-i18n="contact.address.label">地址</strong>
-              <span data-i18n="contact.address.value">澳門宋玉生廣場258號9樓</span>
+              <span id="contact-address-value" data-i18n="contact.address.value">澳門宋玉生廣場258號建興龍廣場9樓B座</span>
+              <button class="copy-address" id="copy-address" type="button" data-i18n="contact.copyAddress">複製地址</button>
             </div>
             <div class="contact-item">
               <strong data-i18n="contact.phone.label">電話 / WhatsApp</strong>
               <a href="tel:+85368254553" data-i18n="contact.phone.value">+853 6825 4553</a>
+            </div>
+            <div class="contact-item">
+              <strong data-i18n="contact.email.label">電子郵件</strong>
+              <a href="mailto:artisandental.macau@gmail.com">artisandental.macau@gmail.com</a>
             </div>
             <div class="contact-item">
               <strong data-i18n="contact.hours.label">營業時間</strong>
@@ -959,12 +909,11 @@
             </div>
             <div class="social-links" role="group" data-i18n-aria="social.title" aria-label="社交平台">
               <span class="social-label" data-i18n="social.label">關注我們</span>
-              <a class="social-btn facebook" href="https://www.facebook.com/" target="_blank" rel="noopener" data-i18n-aria="social.facebook.aria" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
-              <button class="social-btn wechat" type="button" data-open-wechat data-i18n-aria="social.wechat.aria" aria-label="微信 WeChat"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.4 3.2C5.3 3.2 2 6 2 9.5c0 1.9 1 3.6 2.6 4.7l-.7 2.2 2.5-1.3c.6.2 1.3.3 2 .3.3 0 .6 0 .9-.1-.1-.5-.2-1-.2-1.5 0-3.8 3.5-6.9 7.8-6.9h.4C16.4 4.5 13.1 3.2 9.4 3.2zM7 7.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4.6 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/><path d="M22 13.2c0-3.2-3.1-5.7-6.9-5.7s-6.9 2.5-6.9 5.7 3.1 5.7 6.9 5.7c.7 0 1.5-.1 2.1-.3l2.2 1.1-.5-2c1.6-1 2.6-2.5 2.6-4.1zm-9.2-1.4a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8zm4.7 0a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/></svg></button>
-              <a class="social-btn xiaohongshu" href="https://www.xiaohongshu.com/" target="_blank" rel="noopener" data-i18n-aria="social.xiaohongshu.aria" aria-label="小紅書"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><text x="12" y="15" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#ffffff">RED</text></svg></a>
+              <a class="social-btn facebook" href="https://www.facebook.com/ArtisanDental.Macau/" target="_blank" rel="noopener" data-i18n-aria="social.facebook.aria" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+              <a class="social-btn instagram" href="https://www.instagram.com/artisandental.mo/" target="_blank" rel="noopener" data-i18n-aria="social.instagram.aria" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
             </div>
           </div>
-          <iframe class="map-frame" src="https://www.google.com/maps?q=%E6%BE%B3%E9%96%80%E5%AE%8B%E7%8E%89%E7%94%9F%E5%BB%A3%E5%A0%B4258%E8%99%9F&output=embed" title="匠心牙科中心地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="map-frame" src="https://www.google.com/maps?q=%E6%BE%B3%E9%96%80%E5%AE%8B%E7%8E%89%E7%94%9F%E5%BB%A3%E5%A0%B4258%E8%99%9F%E5%BB%BA%E8%88%88%E9%BE%8D%E5%BB%A3%E5%A0%B49%E6%A8%93B%E5%BA%A7&output=embed" title="Artisan Dental 地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -973,28 +922,12 @@
   <footer class="site-footer">
     <div class="container">
       <div class="social-links" role="group" data-i18n-aria="social.title" aria-label="社交平台">
-        <a class="social-btn facebook" href="https://www.facebook.com/" target="_blank" rel="noopener" data-i18n-aria="social.facebook.aria" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
-        <button class="social-btn wechat" type="button" data-open-wechat data-i18n-aria="social.wechat.aria" aria-label="微信 WeChat"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.4 3.2C5.3 3.2 2 6 2 9.5c0 1.9 1 3.6 2.6 4.7l-.7 2.2 2.5-1.3c.6.2 1.3.3 2 .3.3 0 .6 0 .9-.1-.1-.5-.2-1-.2-1.5 0-3.8 3.5-6.9 7.8-6.9h.4C16.4 4.5 13.1 3.2 9.4 3.2zM7 7.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4.6 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/><path d="M22 13.2c0-3.2-3.1-5.7-6.9-5.7s-6.9 2.5-6.9 5.7 3.1 5.7 6.9 5.7c.7 0 1.5-.1 2.1-.3l2.2 1.1-.5-2c1.6-1 2.6-2.5 2.6-4.1zm-9.2-1.4a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8zm4.7 0a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/></svg></button>
-        <a class="social-btn xiaohongshu" href="https://www.xiaohongshu.com/" target="_blank" rel="noopener" data-i18n-aria="social.xiaohongshu.aria" aria-label="小紅書"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><text x="12" y="15" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#ffffff">RED</text></svg></a>
+        <a class="social-btn facebook" href="https://www.facebook.com/ArtisanDental.Macau/" target="_blank" rel="noopener" data-i18n-aria="social.facebook.aria" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+        <a class="social-btn instagram" href="https://www.instagram.com/artisandental.mo/" target="_blank" rel="noopener" data-i18n-aria="social.instagram.aria" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
       </div>
-      <p data-i18n="footer.rights">© 2026 匠心牙科中心。版權所有。</p>
+      <p data-i18n="footer.rights">© 2026 Artisan Dental。版權所有。</p>
     </div>
   </footer>
-
-  <div class="modal" id="wechat-modal" hidden>
-    <div class="modal-backdrop" data-close-modal></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="wechat-modal-title">
-      <button class="modal-close" id="wechat-modal-close" type="button" data-i18n-aria="social.wechatModal.close" aria-label="關閉視窗">&times;</button>
-      <h3 id="wechat-modal-title" data-i18n="social.wechatModal.title">微信客服二維碼（示範）</h3>
-      <p data-i18n="social.wechatModal.subtitle">掃描二維碼添加微信客服</p>
-      <div class="qr-placeholder" role="img" aria-label="微信二維碼（示範）">
-        <svg class="qr-svg" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <rect width="21" height="21" fill="#ffffff"/>
-          <path fill="#111111" fill-rule="evenodd" d="M0 0h7v7H0z M2 2h3v3H2z M14 0h7v7h-7z M16 2h3v3h-3z M0 14h7v7H0z M2 16h3v3H2z M9 0h2v2H9z M12 2h2v2h-2z M9 4h1v1H9z M8 7h3v3H8z M12 7h2v1h-2z M8 11h2v2H8z M11 11h3v3h-3z M15 9h2v3h-2z M18 8h2v2h-2z M9 15h3v2H9z M13 15h2v3h-2z M16 18h3v3h-3z M19 15h2v2h-2z M8 18h2v2H8z"/>
-        </svg>
-      </div>
-    </div>
-  </div>
 
   <a class="whatsapp-float" href="https://wa.me/85368254553" target="_blank" rel="noopener" data-i18n-aria="whatsapp.aria" aria-label="透過 WhatsApp 預約">
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -1007,8 +940,8 @@
     "use strict";
 
     var translations = {
-      "zh-Hant": {      "page.title": "匠心牙科中心 | 澳門皇朝區專業牙科診所",
-      "brand.name": "匠心牙科中心",
+      "zh-Hant": {      "page.title": "Artisan Dental | 澳門專業牙科診所",
+      "brand.name": "Artisan Dental",
       "lang.label": "選擇語言",
       "nav.toggle": "開啟選單",
       "nav.label": "主要導覽",
@@ -1017,15 +950,15 @@
       "nav.reviews": "顧客好評",
       "nav.pricing": "價目/預約",
       "nav.contact": "聯絡與地圖",
-      "hero.tagline": "澳門皇朝區專業牙科診所",
-      "hero.title": "匠心牙科中心",
+      "hero.tagline": "ArtisanDental.mo · 澳門專業牙科診所",
+      "hero.title": "Artisan Dental",
       "hero.subtitle": "人工植牙、齒列矯正、全口重建等全方位牙科服務，Google 5.0 星滿分評價，採預約優先制，細心守護您的笑容。",
       "hero.cta": "WhatsApp 立即預約",
       "about.title": "關於我們",
-      "about.text1": "匠心牙科中心坐落於澳門皇朝區宋玉生廣場，秉持「以匠心守護每一顆牙齒」的理念，提供人工植牙、齒列矯正、全口重建等全方位牙科服務。",
+      "about.text1": "Artisan Dental 坐落於澳門宋玉生廣場258號建興龍廣場9樓B座，秉持「以匠心守護每一顆牙齒」的理念，提供人工植牙、齒列矯正、全口重建等全方位牙科服務。",
       "about.text2": "我們注重細心與專業的醫療品質，設有無障礙設施，並採預約優先制，讓每位顧客都能在舒適安心的環境中獲得妥善照護。",
       "about.text3": "Google 5.0 星滿分評價，是街坊與家庭信賴的牙科夥伴。",
-      "about.imageAlt": "匠心牙科中心診所環境",
+      "about.imageAlt": "Artisan Dental 診所環境",
       "about.imagePlaceholder": "診所環境圖片（示範）",
       "services.title": "服務項目",
       "services.subtitle": "全方位專業牙科服務",
@@ -1074,17 +1007,20 @@
       "pricing.cta": "WhatsApp 預約諮詢",
       "contact.title": "聯絡與地圖",
       "contact.address.label": "地址",
-      "contact.address.value": "澳門宋玉生廣場258號9樓",
+      "contact.address.value": "澳門宋玉生廣場258號建興龍廣場9樓B座",
       "contact.phone.label": "電話 / WhatsApp",
       "contact.phone.value": "+853 6825 4553",
+      "contact.email.label": "電子郵件",
+      "contact.copyAddress": "複製地址",
+      "contact.copyAddress.success": "已複製",
       "contact.hours.label": "營業時間",
       "contact.hours.value": "星期一至星期日 10:00 – 19:00",
       "contact.accessibility.label": "設施",
       "contact.accessibility.value": "無障礙設施",
-      "footer.rights": "© 2026 匠心牙科中心。版權所有。",
+      "footer.rights": "© 2026 Artisan Dental。版權所有。",
       "whatsapp.aria": "透過 WhatsApp 預約",
       "form.title": "線上快速預約",
-      "form.subtitle": "填寫以下資料，我們將盡快與您聯繫確認",
+      "form.subtitle": "填寫資料後，將直接透過 WhatsApp 或 Email 傳送預約給我們",
       "form.name": "姓名",
       "form.phone": "聯絡電話",
       "form.service": "預約項目",
@@ -1097,22 +1033,17 @@
       "form.date": "期望日期",
       "form.note": "備註",
       "form.notePlaceholder": "請簡述您的需求（選填）",
-      "form.submit": "送出預約申請",
-      "form.success": "預約申請已送出，專人將盡快與您聯繫",
+      "form.submit": "立即透過 WhatsApp 預約",
+      "form.email": "改用 Email 傳送預約",
       "form.required": "請填寫姓名、聯絡電話並選擇預約項目",
-      "form.whatsappFallback": "改用 WhatsApp 直接發送此資料",
       "form.msgTitle": "線上預約申請",
       "social.label": "關注我們",
       "social.title": "社交平台",
       "social.facebook.aria": "Facebook",
-      "social.wechat.aria": "微信 WeChat",
-      "social.xiaohongshu.aria": "小紅書",
-      "social.wechatModal.title": "微信客服二維碼（示範）",
-      "social.wechatModal.subtitle": "掃描二維碼添加微信客服",
-      "social.wechatModal.close": "關閉視窗"
+      "social.instagram.aria": "Instagram"
 },
-      "en": {      "page.title": "Ingenuity Dental Center | Professional Dental Clinic in NAPE, Macau",
-      "brand.name": "Ingenuity Dental Center",
+      "en": {      "page.title": "Artisan Dental | Professional Dental Clinic in Macau",
+      "brand.name": "Artisan Dental",
       "lang.label": "Select language",
       "nav.toggle": "Open menu",
       "nav.label": "Main navigation",
@@ -1121,15 +1052,15 @@
       "nav.reviews": "Reviews",
       "nav.pricing": "Pricing & Booking",
       "nav.contact": "Contact & Map",
-      "hero.tagline": "Professional Dental Clinic in NAPE, Macau",
-      "hero.title": "Ingenuity Dental Center",
+      "hero.tagline": "ArtisanDental.mo · Professional Dental Clinic in Macau",
+      "hero.title": "Artisan Dental",
       "hero.subtitle": "Comprehensive dental care including implants, orthodontics and full mouth reconstruction — rated 5.0 stars on Google, with appointment-first service that cares for your smile.",
       "hero.cta": "Book via WhatsApp",
       "about.title": "About Us",
-      "about.text1": "Located on Avenida Dr. Sun Yat Sen in Macau's NAPE district, Ingenuity Dental Center upholds the philosophy of \"crafting care for every tooth\", offering dental implants, orthodontics, full mouth reconstruction and more.",
+      "about.text1": "Located at Unit B, 9/F, Kin Heng Long Plaza, No. 258 Alameda Dr. Carlos d'Assumpção, Macau, Artisan Dental upholds the philosophy of \"crafting care for every tooth\", offering dental implants, orthodontics, full mouth reconstruction and more.",
       "about.text2": "We focus on attentive and professional medical quality, provide barrier-free facilities, and operate on an appointment-first basis so every patient receives proper care in a comfortable environment.",
       "about.text3": "Rated 5.0 stars on Google, we are a trusted dental partner for neighbours and families.",
-      "about.imageAlt": "Ingenuity Dental Center clinic environment",
+      "about.imageAlt": "Artisan Dental clinic environment",
       "about.imagePlaceholder": "Clinic image (demo)",
       "services.title": "Services",
       "services.subtitle": "Comprehensive professional dental care",
@@ -1178,17 +1109,20 @@
       "pricing.cta": "WhatsApp Enquiry",
       "contact.title": "Contact & Map",
       "contact.address.label": "Address",
-      "contact.address.value": "9/F, No. 258 Avenida Dr. Sun Yat Sen, Macau",
+      "contact.address.value": "Unit B, 9/F, Kin Heng Long Plaza, No. 258 Alameda Dr. Carlos d'Assumpção, Macau",
       "contact.phone.label": "Phone / WhatsApp",
       "contact.phone.value": "+853 6825 4553",
+      "contact.email.label": "Email",
+      "contact.copyAddress": "Copy address",
+      "contact.copyAddress.success": "Copied",
       "contact.hours.label": "Opening Hours",
       "contact.hours.value": "Mon – Sun 10:00 – 19:00",
       "contact.accessibility.label": "Facilities",
       "contact.accessibility.value": "Barrier-free access",
-      "footer.rights": "© 2026 Ingenuity Dental Center. All rights reserved.",
+      "footer.rights": "© 2026 Artisan Dental. All rights reserved.",
       "whatsapp.aria": "Book via WhatsApp",
       "form.title": "Online Booking",
-      "form.subtitle": "Fill in the form and we will contact you shortly",
+      "form.subtitle": "Fill in the details and send your booking directly via WhatsApp or Email",
       "form.name": "Name",
       "form.phone": "Phone",
       "form.service": "Service",
@@ -1201,22 +1135,17 @@
       "form.date": "Preferred Date",
       "form.note": "Notes",
       "form.notePlaceholder": "Briefly describe your needs (optional)",
-      "form.submit": "Submit Booking Request",
-      "form.success": "Your booking request has been submitted. Our team will contact you soon.",
+      "form.submit": "Book Now via WhatsApp",
+      "form.email": "Send Booking via Email",
       "form.required": "Please fill in your name and phone, and select a service",
-      "form.whatsappFallback": "Send this info via WhatsApp instead",
       "form.msgTitle": "Online Booking Request",
       "social.label": "Follow us",
       "social.title": "Social media",
       "social.facebook.aria": "Facebook",
-      "social.wechat.aria": "WeChat",
-      "social.xiaohongshu.aria": "Xiaohongshu (RED)",
-      "social.wechatModal.title": "WeChat Customer Service QR Code (Demo)",
-      "social.wechatModal.subtitle": "Scan to add WeChat customer service",
-      "social.wechatModal.close": "Close"
+      "social.instagram.aria": "Instagram"
 },
-      "pt": {      "page.title": "Ingenuity Dental Center | Clínica dentária profissional no NAPE, Macau",
-      "brand.name": "Ingenuity Dental Center",
+      "pt": {      "page.title": "Artisan Dental | Clínica dentária profissional em Macau",
+      "brand.name": "Artisan Dental",
       "lang.label": "Selecionar idioma",
       "nav.toggle": "Abrir menu",
       "nav.label": "Navegação principal",
@@ -1225,15 +1154,15 @@
       "nav.reviews": "Avaliações",
       "nav.pricing": "Preços & Marcação",
       "nav.contact": "Contacto & Mapa",
-      "hero.tagline": "Clínica dentária profissional no NAPE, Macau",
-      "hero.title": "Ingenuity Dental Center",
+      "hero.tagline": "ArtisanDental.mo · Clínica dentária profissional em Macau",
+      "hero.title": "Artisan Dental",
       "hero.subtitle": "Cuidados dentários completos, incluindo implantes, ortodontia e reabilitação oral — avaliado com 5,0 estrelas no Google, com marcação prévia para cuidar do seu sorriso.",
       "hero.cta": "Marcar via WhatsApp",
       "about.title": "Sobre Nós",
-      "about.text1": "Situado na Avenida Dr. Sun Yat Sen, no NAPE de Macau, o Ingenuity Dental Center mantém a filosofia de \"cuidar de cada dente com dedicação\", oferecendo implantes dentários, ortodontia, reabilitação oral e muito mais.",
+      "about.text1": "Situado na Alameda Dr. Carlos d'Assumpção n.º 258, Edifício Kin Heng Long Plaza, 9.º Andar B, Macau, a Artisan Dental mantém a filosofia de \"cuidar de cada dente com dedicação\", oferecendo implantes dentários, ortodontia, reabilitação oral e muito mais.",
       "about.text2": "Focamo-nos numa qualidade médica atenta e profissional, dispomos de instalações acessíveis e funcionamos por marcação prévia, para que cada paciente receba cuidados adequados num ambiente confortável.",
       "about.text3": "Com avaliação de 5,0 estrelas no Google, somos um parceiro dentário de confiança para vizinhos e famílias.",
-      "about.imageAlt": "Ambiente da clínica Ingenuity Dental Center",
+      "about.imageAlt": "Ambiente da clínica Artisan Dental",
       "about.imagePlaceholder": "Imagem da clínica (demonstração)",
       "services.title": "Serviços",
       "services.subtitle": "Cuidados dentários profissionais completos",
@@ -1282,17 +1211,20 @@
       "pricing.cta": "Consultar via WhatsApp",
       "contact.title": "Contacto & Mapa",
       "contact.address.label": "Endereço",
-      "contact.address.value": "9.º andar, N.º 258 Avenida Dr. Sun Yat Sen, Macau",
+      "contact.address.value": "Alameda Dr. Carlos d'Assumpção n.º 258, Edifício Kin Heng Long Plaza, 9.º Andar B, Macau",
       "contact.phone.label": "Telefone / WhatsApp",
       "contact.phone.value": "+853 6825 4553",
+      "contact.email.label": "Email",
+      "contact.copyAddress": "Copiar endereço",
+      "contact.copyAddress.success": "Copiado",
       "contact.hours.label": "Horário",
       "contact.hours.value": "Seg – Dom 10:00 – 19:00",
       "contact.accessibility.label": "Instalações",
       "contact.accessibility.value": "Acesso sem barreiras",
-      "footer.rights": "© 2026 Ingenuity Dental Center. Todos os direitos reservados.",
+      "footer.rights": "© 2026 Artisan Dental. Todos os direitos reservados.",
       "whatsapp.aria": "Marcar via WhatsApp",
       "form.title": "Marcação Online",
-      "form.subtitle": "Preencha o formulário e entraremos em contacto brevemente",
+      "form.subtitle": "Preencha os dados e envie a sua marcação diretamente via WhatsApp ou Email",
       "form.name": "Nome",
       "form.phone": "Telefone",
       "form.service": "Serviço",
@@ -1305,19 +1237,14 @@
       "form.date": "Data Preferida",
       "form.note": "Notas",
       "form.notePlaceholder": "Descreva brevemente a sua necessidade (opcional)",
-      "form.submit": "Enviar Pedido de Marcação",
-      "form.success": "O seu pedido de marcação foi enviado. A nossa equipa entrará em contacto em breve.",
+      "form.submit": "Marcar via WhatsApp",
+      "form.email": "Enviar Marcação por Email",
       "form.required": "Preencha o nome e o telefone e selecione um serviço",
-      "form.whatsappFallback": "Enviar estes dados via WhatsApp",
       "form.msgTitle": "Pedido de Marcação Online",
       "social.label": "Siga-nos",
       "social.title": "Redes sociais",
       "social.facebook.aria": "Facebook",
-      "social.wechat.aria": "WeChat",
-      "social.xiaohongshu.aria": "Xiaohongshu (RED)",
-      "social.wechatModal.title": "Código QR do Serviço WeChat (Demonstração)",
-      "social.wechatModal.subtitle": "Digitalize para adicionar o serviço WeChat",
-      "social.wechatModal.close": "Fechar"
+      "social.instagram.aria": "Instagram"
 }
     };
 
@@ -1402,70 +1329,93 @@
         });
       }
 
+      function collectBookingData() {
+        var name = document.getElementById("bf-name").value.trim();
+        var phone = document.getElementById("bf-phone").value.trim();
+        var serviceEl = document.getElementById("bf-service");
+        var service = serviceEl && serviceEl.selectedIndex > 0 ? serviceEl.options[serviceEl.selectedIndex].text : "";
+        var date = document.getElementById("bf-date").value;
+        var note = document.getElementById("bf-note").value.trim();
+        return { name: name, phone: phone, service: service, date: date, note: note };
+      }
+
+      function buildBookingLines(t) {
+        var d = collectBookingData();
+        var lines = [t["form.msgTitle"]];
+        lines.push(t["form.name"] + "：" + d.name);
+        lines.push(t["form.phone"] + "：" + d.phone);
+        if (d.service) { lines.push(t["form.service"] + "：" + d.service); }
+        if (d.date) { lines.push(t["form.date"] + "：" + d.date); }
+        if (d.note) { lines.push(t["form.note"] + "：" + d.note); }
+        return lines;
+      }
+
+      function validateBooking(t) {
+        var d = collectBookingData();
+        if (!d.name || !d.phone || !d.service) {
+          alert(t["form.required"]);
+          return false;
+        }
+        return true;
+      }
+
       var bookingForm = document.getElementById("booking-form");
       if (bookingForm) {
         bookingForm.addEventListener("submit", function (e) {
           e.preventDefault();
           var t = translations[currentLang] || translations["zh-Hant"];
-          var name = document.getElementById("bf-name").value.trim();
-          var phone = document.getElementById("bf-phone").value.trim();
-          var service = document.getElementById("bf-service").value;
-          if (!name || !phone || !service) {
-            alert(t["form.required"]);
-            return;
-          }
-          var success = document.getElementById("booking-form-success");
-          var fallback = document.getElementById("booking-whatsapp-fallback");
-          var submitBtn = bookingForm.querySelector('button[type="submit"]');
-          if (success) { success.hidden = false; }
-          if (fallback) { fallback.hidden = false; }
-          if (submitBtn) { submitBtn.disabled = true; }
+          if (!validateBooking(t)) { return; }
+          var text = buildBookingLines(t).join("\n");
+          window.open("https://wa.me/85368254553?text=" + encodeURIComponent(text), "_blank", "noopener");
         });
-
-        var whatsappFallback = document.getElementById("booking-whatsapp-fallback");
-        if (whatsappFallback) {
-          whatsappFallback.addEventListener("click", function () {
-            var t = translations[currentLang] || translations["zh-Hant"];
-            var name = document.getElementById("bf-name").value.trim();
-            var phone = document.getElementById("bf-phone").value.trim();
-            var serviceEl = document.getElementById("bf-service");
-            var service = serviceEl.selectedIndex > 0 ? serviceEl.options[serviceEl.selectedIndex].text : "";
-            var date = document.getElementById("bf-date").value;
-            var note = document.getElementById("bf-note").value.trim();
-            var lines = [t["form.msgTitle"]];
-            lines.push(t["form.name"] + "：" + name);
-            lines.push(t["form.phone"] + "：" + phone);
-            if (service) { lines.push(t["form.service"] + "：" + service); }
-            if (date) { lines.push(t["form.date"] + "：" + date); }
-            if (note) { lines.push(t["form.note"] + "：" + note); }
-            window.open("https://wa.me/85368254553?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
-          });
-        }
       }
 
-      var wechatModal = document.getElementById("wechat-modal");
-      var wechatCloseBtn = document.getElementById("wechat-modal-close");
-      function openWechatModal() {
-        if (!wechatModal) { return; }
-        wechatModal.hidden = false;
-        if (wechatCloseBtn) { wechatCloseBtn.focus(); }
-      }
-      function closeWechatModal() {
-        if (wechatModal) { wechatModal.hidden = true; }
-      }
-      if (wechatModal) {
-        document.querySelectorAll("[data-open-wechat]").forEach(function (btn) {
-          btn.addEventListener("click", openWechatModal);
+      var emailBooking = document.getElementById("booking-email");
+      if (emailBooking) {
+        emailBooking.addEventListener("click", function () {
+          var t = translations[currentLang] || translations["zh-Hant"];
+          if (!validateBooking(t)) { return; }
+          var subject = encodeURIComponent(t["form.msgTitle"]);
+          var body = encodeURIComponent(buildBookingLines(t).join("\n"));
+          window.location.href = "mailto:artisandental.macau@gmail.com?subject=" + subject + "&body=" + body;
         });
-        if (wechatCloseBtn) {
-          wechatCloseBtn.addEventListener("click", closeWechatModal);
+      }
+
+      var copyAddressBtn = document.getElementById("copy-address");
+      var addressEl = document.getElementById("contact-address-value");
+      if (copyAddressBtn && addressEl) {
+        function fallbackCopy(text) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand("copy"); } catch (err) {}
+          document.body.removeChild(ta);
         }
-        wechatModal.querySelectorAll("[data-close-modal]").forEach(function (el) {
-          el.addEventListener("click", closeWechatModal);
-        });
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && !wechatModal.hidden) {
-            closeWechatModal();
+
+        copyAddressBtn.addEventListener("click", function () {
+          var t = translations[currentLang] || translations["zh-Hant"];
+          var text = addressEl.textContent.trim();
+          var showCopied = function () {
+            var original = copyAddressBtn.textContent;
+            copyAddressBtn.textContent = t["contact.copyAddress.success"];
+            copyAddressBtn.classList.add("copied");
+            setTimeout(function () {
+              copyAddressBtn.textContent = original;
+              copyAddressBtn.classList.remove("copied");
+            }, 2000);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(showCopied, function () {
+              fallbackCopy(text);
+              showCopied();
+            });
+          } else {
+            fallbackCopy(text);
+            showCopied();
           }
         });
       }

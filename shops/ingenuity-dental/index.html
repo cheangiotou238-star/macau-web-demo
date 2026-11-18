@@ -279,13 +279,18 @@
     .about-text p + p { margin-top: 1rem; }
 
     .about-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 220px;
       border-radius: var(--radius);
-      background: var(--color-primary-light);
-      color: var(--color-primary-dark);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      display: block;
+      border-radius: var(--radius);
     }
 
     @media (min-width: 768px) {
@@ -482,6 +487,234 @@
       .whatsapp-float svg { width: 34px; height: 34px; }
     }
 
+    /* Booking form */
+    .booking-form {
+      margin-top: 2.5rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      text-align: left;
+    }
+
+    .booking-form-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .booking-form-subtitle {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-row { grid-template-columns: 1fr 1fr; }
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-field label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      min-height: 44px;
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      font: inherit;
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-field input:focus-visible,
+    .form-field select:focus-visible,
+    .form-field textarea:focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .booking-form .btn {
+      width: 100%;
+      border: none;
+    }
+
+    .form-success {
+      margin-top: 1rem;
+      padding: 0.85rem 1rem;
+      background: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .btn-whatsapp-fallback {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 44px;
+      margin-top: 0.75rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--color-accent);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--color-accent-dark);
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-whatsapp-fallback:hover {
+      background: var(--color-accent);
+      color: #ffffff;
+    }
+
+    /* Social buttons */
+    .social-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .social-label {
+      font-weight: 700;
+      margin-right: 0.25rem;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #ffffff;
+      text-decoration: none;
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(0.92);
+    }
+
+    .social-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: #ffffff;
+    }
+
+    .social-btn.facebook { background: #1877f2; }
+    .social-btn.wechat { background: #07c160; }
+    .social-btn.xiaohongshu { background: #ff2442; }
+
+    .site-footer .social-links {
+      justify-content: center;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    /* WeChat modal */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .modal[hidden] { display: none; }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+    }
+
+    .modal-dialog {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      background: var(--color-surface);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--color-text-muted);
+      font-size: 1.6rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .modal-close:hover {
+      background: var(--color-primary-light);
+      color: var(--color-primary-dark);
+    }
+
+    .modal-dialog h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .modal-dialog p {
+      color: var(--color-text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .qr-placeholder {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+    }
+
+    .qr-svg {
+      width: 180px;
+      height: 180px;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       * { transition: none !important; animation: none !important; }
@@ -537,8 +770,12 @@
             <p data-i18n="about.text2">我們注重細心與專業的醫療品質，設有無障礙設施，並採預約優先制，讓每位顧客都能在舒適安心的環境中獲得妥善照護。</p>
             <p data-i18n="about.text3">Google 5.0 星滿分評價，是街坊與家庭信賴的牙科夥伴。</p>
           </div>
-          <div class="about-image" role="img" data-i18n-aria="about.imageAlt" aria-label="匠心牙科中心診所環境">
-            <span data-i18n="about.imagePlaceholder">診所環境圖片（示範）</span>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
+                 srcset="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80 1200w"
+                 sizes="(max-width: 767px) 100vw, 50vw"
+                 alt="匠心牙科中心診所環境" data-i18n-alt="about.imageAlt"
+                 width="1200" height="900" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -655,6 +892,47 @@
         <div class="booking-cta">
           <a class="btn btn-secondary" href="https://wa.me/85368254553" target="_blank" rel="noopener" data-i18n="pricing.cta">WhatsApp 預約諮詢</a>
         </div>
+
+        <div class="booking-form">
+          <h3 class="booking-form-title" data-i18n="form.title">線上快速預約</h3>
+          <p class="booking-form-subtitle" data-i18n="form.subtitle">填寫以下資料，我們將盡快與您聯繫確認</p>
+          <form id="booking-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="bf-name" data-i18n="form.name">姓名</label>
+                <input id="bf-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="bf-phone" data-i18n="form.phone">聯絡電話</label>
+                <input id="bf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="bf-service" data-i18n="form.service">預約項目</label>
+                <select id="bf-service" name="service" required>
+                  <option value="" selected data-i18n="form.selectService">請選擇預約項目</option>
+                  <option value="initial" data-i18n="form.option1">初診口腔檢查</option>
+                  <option value="cleaning" data-i18n="form.option2">專業洗牙</option>
+                  <option value="whitening" data-i18n="form.option3">冷光美白</option>
+                  <option value="implant" data-i18n="form.option4">人工植牙</option>
+                  <option value="other" data-i18n="form.option5">其他諮詢</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="bf-date" data-i18n="form.date">期望日期</label>
+                <input id="bf-date" name="date" type="date">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="bf-note" data-i18n="form.note">備註</label>
+              <textarea id="bf-note" name="note" rows="3" data-i18n-placeholder="form.notePlaceholder" placeholder="請簡述您的需求（選填）"></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary" data-i18n="form.submit">送出預約申請</button>
+            <p class="form-success" id="booking-form-success" role="status" data-i18n="form.success" hidden>預約申請已送出，專人將盡快與您聯繫</p>
+            <button type="button" class="btn-whatsapp-fallback" id="booking-whatsapp-fallback" data-i18n="form.whatsappFallback" hidden>改用 WhatsApp 直接發送此資料</button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -679,6 +957,12 @@
               <strong data-i18n="contact.accessibility.label">設施</strong>
               <span data-i18n="contact.accessibility.value">無障礙設施</span>
             </div>
+            <div class="social-links" role="group" data-i18n-aria="social.title" aria-label="社交平台">
+              <span class="social-label" data-i18n="social.label">關注我們</span>
+              <a class="social-btn facebook" href="https://www.facebook.com/" target="_blank" rel="noopener" data-i18n-aria="social.facebook.aria" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+              <button class="social-btn wechat" type="button" data-open-wechat data-i18n-aria="social.wechat.aria" aria-label="微信 WeChat"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.4 3.2C5.3 3.2 2 6 2 9.5c0 1.9 1 3.6 2.6 4.7l-.7 2.2 2.5-1.3c.6.2 1.3.3 2 .3.3 0 .6 0 .9-.1-.1-.5-.2-1-.2-1.5 0-3.8 3.5-6.9 7.8-6.9h.4C16.4 4.5 13.1 3.2 9.4 3.2zM7 7.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4.6 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/><path d="M22 13.2c0-3.2-3.1-5.7-6.9-5.7s-6.9 2.5-6.9 5.7 3.1 5.7 6.9 5.7c.7 0 1.5-.1 2.1-.3l2.2 1.1-.5-2c1.6-1 2.6-2.5 2.6-4.1zm-9.2-1.4a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8zm4.7 0a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/></svg></button>
+              <a class="social-btn xiaohongshu" href="https://www.xiaohongshu.com/" target="_blank" rel="noopener" data-i18n-aria="social.xiaohongshu.aria" aria-label="小紅書"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><text x="12" y="15" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#ffffff">RED</text></svg></a>
+            </div>
           </div>
           <iframe class="map-frame" src="https://www.google.com/maps?q=%E6%BE%B3%E9%96%80%E5%AE%8B%E7%8E%89%E7%94%9F%E5%BB%A3%E5%A0%B4258%E8%99%9F&output=embed" title="匠心牙科中心地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -688,9 +972,29 @@
 
   <footer class="site-footer">
     <div class="container">
+      <div class="social-links" role="group" data-i18n-aria="social.title" aria-label="社交平台">
+        <a class="social-btn facebook" href="https://www.facebook.com/" target="_blank" rel="noopener" data-i18n-aria="social.facebook.aria" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
+        <button class="social-btn wechat" type="button" data-open-wechat data-i18n-aria="social.wechat.aria" aria-label="微信 WeChat"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M9.4 3.2C5.3 3.2 2 6 2 9.5c0 1.9 1 3.6 2.6 4.7l-.7 2.2 2.5-1.3c.6.2 1.3.3 2 .3.3 0 .6 0 .9-.1-.1-.5-.2-1-.2-1.5 0-3.8 3.5-6.9 7.8-6.9h.4C16.4 4.5 13.1 3.2 9.4 3.2zM7 7.4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4.6 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/><path d="M22 13.2c0-3.2-3.1-5.7-6.9-5.7s-6.9 2.5-6.9 5.7 3.1 5.7 6.9 5.7c.7 0 1.5-.1 2.1-.3l2.2 1.1-.5-2c1.6-1 2.6-2.5 2.6-4.1zm-9.2-1.4a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8zm4.7 0a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"/></svg></button>
+        <a class="social-btn xiaohongshu" href="https://www.xiaohongshu.com/" target="_blank" rel="noopener" data-i18n-aria="social.xiaohongshu.aria" aria-label="小紅書"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><text x="12" y="15" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#ffffff">RED</text></svg></a>
+      </div>
       <p data-i18n="footer.rights">© 2026 匠心牙科中心。版權所有。</p>
     </div>
   </footer>
+
+  <div class="modal" id="wechat-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="wechat-modal-title">
+      <button class="modal-close" id="wechat-modal-close" type="button" data-i18n-aria="social.wechatModal.close" aria-label="關閉視窗">&times;</button>
+      <h3 id="wechat-modal-title" data-i18n="social.wechatModal.title">微信客服二維碼（示範）</h3>
+      <p data-i18n="social.wechatModal.subtitle">掃描二維碼添加微信客服</p>
+      <div class="qr-placeholder" role="img" aria-label="微信二維碼（示範）">
+        <svg class="qr-svg" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect width="21" height="21" fill="#ffffff"/>
+          <path fill="#111111" fill-rule="evenodd" d="M0 0h7v7H0z M2 2h3v3H2z M14 0h7v7h-7z M16 2h3v3h-3z M0 14h7v7H0z M2 16h3v3H2z M9 0h2v2H9z M12 2h2v2h-2z M9 4h1v1H9z M8 7h3v3H8z M12 7h2v1h-2z M8 11h2v2H8z M11 11h3v3h-3z M15 9h2v3h-2z M18 8h2v2h-2z M9 15h3v2H9z M13 15h2v3h-2z M16 18h3v3h-3z M19 15h2v2h-2z M8 18h2v2H8z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
 
   <a class="whatsapp-float" href="https://wa.me/85368254553" target="_blank" rel="noopener" data-i18n-aria="whatsapp.aria" aria-label="透過 WhatsApp 預約">
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -778,7 +1082,34 @@
       "contact.accessibility.label": "設施",
       "contact.accessibility.value": "無障礙設施",
       "footer.rights": "© 2026 匠心牙科中心。版權所有。",
-      "whatsapp.aria": "透過 WhatsApp 預約"
+      "whatsapp.aria": "透過 WhatsApp 預約",
+      "form.title": "線上快速預約",
+      "form.subtitle": "填寫以下資料，我們將盡快與您聯繫確認",
+      "form.name": "姓名",
+      "form.phone": "聯絡電話",
+      "form.service": "預約項目",
+      "form.selectService": "請選擇預約項目",
+      "form.option1": "初診口腔檢查",
+      "form.option2": "專業洗牙",
+      "form.option3": "冷光美白",
+      "form.option4": "人工植牙",
+      "form.option5": "其他諮詢",
+      "form.date": "期望日期",
+      "form.note": "備註",
+      "form.notePlaceholder": "請簡述您的需求（選填）",
+      "form.submit": "送出預約申請",
+      "form.success": "預約申請已送出，專人將盡快與您聯繫",
+      "form.required": "請填寫姓名、聯絡電話並選擇預約項目",
+      "form.whatsappFallback": "改用 WhatsApp 直接發送此資料",
+      "form.msgTitle": "線上預約申請",
+      "social.label": "關注我們",
+      "social.title": "社交平台",
+      "social.facebook.aria": "Facebook",
+      "social.wechat.aria": "微信 WeChat",
+      "social.xiaohongshu.aria": "小紅書",
+      "social.wechatModal.title": "微信客服二維碼（示範）",
+      "social.wechatModal.subtitle": "掃描二維碼添加微信客服",
+      "social.wechatModal.close": "關閉視窗"
 },
       "en": {      "page.title": "Ingenuity Dental Center | Professional Dental Clinic in NAPE, Macau",
       "brand.name": "Ingenuity Dental Center",
@@ -855,7 +1186,34 @@
       "contact.accessibility.label": "Facilities",
       "contact.accessibility.value": "Barrier-free access",
       "footer.rights": "© 2026 Ingenuity Dental Center. All rights reserved.",
-      "whatsapp.aria": "Book via WhatsApp"
+      "whatsapp.aria": "Book via WhatsApp",
+      "form.title": "Online Booking",
+      "form.subtitle": "Fill in the form and we will contact you shortly",
+      "form.name": "Name",
+      "form.phone": "Phone",
+      "form.service": "Service",
+      "form.selectService": "Select a service",
+      "form.option1": "Initial Oral Examination",
+      "form.option2": "Professional Cleaning",
+      "form.option3": "Cold Light Whitening",
+      "form.option4": "Dental Implants",
+      "form.option5": "Other Enquiry",
+      "form.date": "Preferred Date",
+      "form.note": "Notes",
+      "form.notePlaceholder": "Briefly describe your needs (optional)",
+      "form.submit": "Submit Booking Request",
+      "form.success": "Your booking request has been submitted. Our team will contact you soon.",
+      "form.required": "Please fill in your name and phone, and select a service",
+      "form.whatsappFallback": "Send this info via WhatsApp instead",
+      "form.msgTitle": "Online Booking Request",
+      "social.label": "Follow us",
+      "social.title": "Social media",
+      "social.facebook.aria": "Facebook",
+      "social.wechat.aria": "WeChat",
+      "social.xiaohongshu.aria": "Xiaohongshu (RED)",
+      "social.wechatModal.title": "WeChat Customer Service QR Code (Demo)",
+      "social.wechatModal.subtitle": "Scan to add WeChat customer service",
+      "social.wechatModal.close": "Close"
 },
       "pt": {      "page.title": "Ingenuity Dental Center | Clínica dentária profissional no NAPE, Macau",
       "brand.name": "Ingenuity Dental Center",
@@ -932,12 +1290,42 @@
       "contact.accessibility.label": "Instalações",
       "contact.accessibility.value": "Acesso sem barreiras",
       "footer.rights": "© 2026 Ingenuity Dental Center. Todos os direitos reservados.",
-      "whatsapp.aria": "Marcar via WhatsApp"
+      "whatsapp.aria": "Marcar via WhatsApp",
+      "form.title": "Marcação Online",
+      "form.subtitle": "Preencha o formulário e entraremos em contacto brevemente",
+      "form.name": "Nome",
+      "form.phone": "Telefone",
+      "form.service": "Serviço",
+      "form.selectService": "Selecione um serviço",
+      "form.option1": "Exame Oral Inicial",
+      "form.option2": "Limpeza Profissional",
+      "form.option3": "Branqueamento a Luz Fria",
+      "form.option4": "Implantes Dentários",
+      "form.option5": "Outra Consulta",
+      "form.date": "Data Preferida",
+      "form.note": "Notas",
+      "form.notePlaceholder": "Descreva brevemente a sua necessidade (opcional)",
+      "form.submit": "Enviar Pedido de Marcação",
+      "form.success": "O seu pedido de marcação foi enviado. A nossa equipa entrará em contacto em breve.",
+      "form.required": "Preencha o nome e o telefone e selecione um serviço",
+      "form.whatsappFallback": "Enviar estes dados via WhatsApp",
+      "form.msgTitle": "Pedido de Marcação Online",
+      "social.label": "Siga-nos",
+      "social.title": "Redes sociais",
+      "social.facebook.aria": "Facebook",
+      "social.wechat.aria": "WeChat",
+      "social.xiaohongshu.aria": "Xiaohongshu (RED)",
+      "social.wechatModal.title": "Código QR do Serviço WeChat (Demonstração)",
+      "social.wechatModal.subtitle": "Digitalize para adicionar o serviço WeChat",
+      "social.wechatModal.close": "Fechar"
 }
     };
 
+      var currentLang = "zh-Hant";
+
       function applyLanguage(lang) {
       if (!translations[lang]) { lang = "zh-Hant"; }
+      currentLang = lang;
 
       document.documentElement.lang = lang;
       if (translations[lang]["page.title"]) {
@@ -955,6 +1343,20 @@
         var key = el.getAttribute("data-i18n-aria");
         if (translations[lang][key]) {
           el.setAttribute("aria-label", translations[lang][key]);
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n-alt");
+        if (translations[lang][key]) {
+          el.setAttribute("alt", translations[lang][key]);
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n-placeholder");
+        if (translations[lang][key]) {
+          el.setAttribute("placeholder", translations[lang][key]);
         }
       });
 
@@ -997,6 +1399,74 @@
             nav.classList.remove("open");
             toggle.setAttribute("aria-expanded", "false");
           });
+        });
+      }
+
+      var bookingForm = document.getElementById("booking-form");
+      if (bookingForm) {
+        bookingForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var t = translations[currentLang] || translations["zh-Hant"];
+          var name = document.getElementById("bf-name").value.trim();
+          var phone = document.getElementById("bf-phone").value.trim();
+          var service = document.getElementById("bf-service").value;
+          if (!name || !phone || !service) {
+            alert(t["form.required"]);
+            return;
+          }
+          var success = document.getElementById("booking-form-success");
+          var fallback = document.getElementById("booking-whatsapp-fallback");
+          var submitBtn = bookingForm.querySelector('button[type="submit"]');
+          if (success) { success.hidden = false; }
+          if (fallback) { fallback.hidden = false; }
+          if (submitBtn) { submitBtn.disabled = true; }
+        });
+
+        var whatsappFallback = document.getElementById("booking-whatsapp-fallback");
+        if (whatsappFallback) {
+          whatsappFallback.addEventListener("click", function () {
+            var t = translations[currentLang] || translations["zh-Hant"];
+            var name = document.getElementById("bf-name").value.trim();
+            var phone = document.getElementById("bf-phone").value.trim();
+            var serviceEl = document.getElementById("bf-service");
+            var service = serviceEl.selectedIndex > 0 ? serviceEl.options[serviceEl.selectedIndex].text : "";
+            var date = document.getElementById("bf-date").value;
+            var note = document.getElementById("bf-note").value.trim();
+            var lines = [t["form.msgTitle"]];
+            lines.push(t["form.name"] + "：" + name);
+            lines.push(t["form.phone"] + "：" + phone);
+            if (service) { lines.push(t["form.service"] + "：" + service); }
+            if (date) { lines.push(t["form.date"] + "：" + date); }
+            if (note) { lines.push(t["form.note"] + "：" + note); }
+            window.open("https://wa.me/85368254553?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+          });
+        }
+      }
+
+      var wechatModal = document.getElementById("wechat-modal");
+      var wechatCloseBtn = document.getElementById("wechat-modal-close");
+      function openWechatModal() {
+        if (!wechatModal) { return; }
+        wechatModal.hidden = false;
+        if (wechatCloseBtn) { wechatCloseBtn.focus(); }
+      }
+      function closeWechatModal() {
+        if (wechatModal) { wechatModal.hidden = true; }
+      }
+      if (wechatModal) {
+        document.querySelectorAll("[data-open-wechat]").forEach(function (btn) {
+          btn.addEventListener("click", openWechatModal);
+        });
+        if (wechatCloseBtn) {
+          wechatCloseBtn.addEventListener("click", closeWechatModal);
+        }
+        wechatModal.querySelectorAll("[data-close-modal]").forEach(function (el) {
+          el.addEventListener("click", closeWechatModal);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !wechatModal.hidden) {
+            closeWechatModal();
+          }
         });
       }
     });

@@ -5,3 +5,4 @@
 - 2026/11/17：初始化 Git（預設分支 `main`）、綁定遠端 `origin`，以 `gh` CLI 建立公開倉庫並完成首次 Commit 與 Push。
 - 2026/11/17：建立首個子商戶頁 `shops/ingenuity-dental/index.html`（牙科診所），新增「顧客好評」區塊、`aggregateRating` 結構化資料與 Google Maps 定位。
 - 2026/11/18：移除根目錄假茶餐廳測試頁，改為中性工作室簡介頁；匠心牙科升級為完整商業版（真實圖片、線上預約表單、社交按鈕、WeChat QR modal），並 Commit + Push。
+- 2026/11/18：根目錄 `index.html` 改版為國際化工作室封面「Stride Web Co」——預設英文、英/繁中/葡三語、移除澳門地址與區號電話、Email 聯絡（hello@stridewebco.com）、JSON-LD 改為 Organization（stridewebco.com）；`shops/ingenuity-dental/` 保持不變。

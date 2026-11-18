@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>澳門本地商戶數位化網頁工作室</title>
-  <meta name="description" content="專為澳門本地商戶打造手機優先三語官方網站，提供響應式設計、繁中/英/葡三語與 WhatsApp 預約整合服務。">
-  <meta property="og:title" content="澳門本地商戶數位化網頁工作室">
-  <meta property="og:description" content="專為澳門本地商戶打造手機優先三語官方網站。">
+  <title>Stride Web Co — Mobile-First Websites Built for Modern Businesses</title>
+  <meta name="description" content="Stride Web Co builds clean, mobile-first websites for modern businesses — responsive design, multilingual localization, and instant booking & maps integration.">
+  <meta property="og:title" content="Stride Web Co">
+  <meta property="og:description" content="Mobile-first websites built for modern businesses — responsive design, multilingual localization, and instant booking & maps integration.">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="zh_Hant">
-  <meta property="og:url" content="https://cheangiotou238-star.github.io/macau-web-demo/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://stridewebco.com/">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "澳門本地商戶數位化網頁工作室",
-    "url": "https://cheangiotou238-star.github.io/macau-web-demo/"
+    "name": "Stride Web Co",
+    "url": "https://stridewebco.com/",
+    "email": "hello@stridewebco.com"
   }
   </script>
   <style>
@@ -127,6 +128,12 @@
       cursor: pointer;
     }
 
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
     .hero {
       background: linear-gradient(135deg, #0f766e 0%, #0891b2 100%);
       color: #ffffff;
@@ -172,6 +179,25 @@
       .cards { grid-template-columns: repeat(3, 1fr); }
     }
 
+    .contact { text-align: center; }
+
+    .contact-email { margin-top: 0.75rem; }
+
+    .contact-email a {
+      display: inline-block;
+      min-height: 44px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      text-decoration: none;
+      border-bottom: 2px solid var(--color-primary);
+      padding-bottom: 0.15rem;
+    }
+
+    .contact-email a:hover {
+      color: var(--color-primary);
+    }
+
     .site-footer {
       background: #1f2d33;
       color: #dddddd;
@@ -187,39 +213,61 @@
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="#hero">Stride Web Co</a>
+      <div class="nav-controls">
+        <label class="visually-hidden" for="lang-switch" data-i18n="lang.label">Select language</label>
+        <select id="lang-switch" class="lang-switch">
+          <option value="en">English</option>
+          <option value="zh-Hant">繁體中文</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
   <main>
     <section id="hero" class="hero">
       <div class="container hero-inner">
-        <h1 data-i18n="hero.tagline">專為澳門本地商戶打造手機優先三語官方網站</h1>
-        <p data-i18n="hero.subtitle">我們協助澳門本地商戶建立現代化官方網站，以手機優先設計、繁中/英/葡三語與 WhatsApp 預約整合，提升線上曝光與顧客信賴。</p>
+        <h1 data-i18n="hero.tagline">Mobile-First Websites Built for Modern Businesses</h1>
+        <p data-i18n="hero.subtitle">Clean, fast, responsive websites that help modern businesses grow — no clutter, just results.</p>
       </div>
     </section>
 
     <section id="services">
       <div class="container">
-        <h2 class="section-title" data-i18n="services.title">我們的服務</h2>
-        <p class="section-subtitle" data-i18n="services.subtitle">專注澳門本地商戶的數位化方案</p>
+        <h2 class="section-title" data-i18n="services.title">Our Services</h2>
+        <p class="section-subtitle" data-i18n="services.subtitle">Everything you need to launch a modern web presence</p>
         <div class="cards">
           <article class="card">
-            <h3 data-i18n="service1.title">手機優先響應式設計</h3>
-            <p data-i18n="service1.desc">以手機為核心設計，平板與桌面逐步增強，任何裝置都能順暢瀏覽。</p>
+            <h3 data-i18n="service1.title">Mobile-First RWD</h3>
+            <p data-i18n="service1.desc">Responsive layouts designed mobile-first and progressively enhanced for tablet and desktop.</p>
           </article>
           <article class="card">
-            <h3 data-i18n="service2.title">三語在地化</h3>
-            <p data-i18n="service2.desc">繁體中文、英文、葡文一鍵切換，符合澳門多語使用習慣。</p>
+            <h3 data-i18n="service2.title">Multilingual Localization</h3>
+            <p data-i18n="service2.desc">Built-in language switching so your content speaks to every customer.</p>
           </article>
           <article class="card">
-            <h3 data-i18n="service3.title">WhatsApp 預約與地圖整合</h3>
-            <p data-i18n="service3.desc">整合 WhatsApp 浮動預約按鈕、Google 地圖與 SEO 結構化資料。</p>
+            <h3 data-i18n="service3.title">Instant Booking & Maps Integration</h3>
+            <p data-i18n="service3.desc">WhatsApp booking, Google Maps and structured data baked in from day one.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact">
+        <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Tell us about your project — we'll get back to you.</p>
+        <p class="contact-email"><a href="mailto:hello@stridewebco.com">hello@stridewebco.com</a></p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p data-i18n="footer.rights">© 2026 澳門本地商戶數位化網頁工作室。版權所有。</p>
+      <p data-i18n="footer.rights">© 2026 Stride Web Co. All rights reserved.</p>
     </div>
   </footer>
 
@@ -228,58 +276,61 @@
     "use strict";
 
     var translations = {
-      "zh-Hant": {
-        "page.title": "澳門本地商戶數位化網頁工作室",
-        "brand.name": "澳門商戶網頁工作室",
-        "lang.label": "選擇語言",
-        "hero.tagline": "專為澳門本地商戶打造手機優先三語官方網站",
-        "hero.subtitle": "我們協助澳門本地商戶建立現代化官方網站，以手機優先設計、繁中/英/葡三語與 WhatsApp 預約整合，提升線上曝光與顧客信賴。",
-        "services.title": "我們的服務",
-        "services.subtitle": "專注澳門本地商戶的數位化方案",
-        "service1.title": "手機優先響應式設計",
-        "service1.desc": "以手機為核心設計，平板與桌面逐步增強，任何裝置都能順暢瀏覽。",
-        "service2.title": "三語在地化",
-        "service2.desc": "繁體中文、英文、葡文一鍵切換，符合澳門多語使用習慣。",
-        "service3.title": "WhatsApp 預約與地圖整合",
-        "service3.desc": "整合 WhatsApp 浮動預約按鈕、Google 地圖與 SEO 結構化資料。",
-        "footer.rights": "© 2026 澳門本地商戶數位化網頁工作室。版權所有。"
-      },
       "en": {
-        "page.title": "Macau Local Merchant Web Studio",
-        "brand.name": "Macau Merchant Web Studio",
+        "page.title": "Stride Web Co — Mobile-First Websites Built for Modern Businesses",
         "lang.label": "Select language",
-        "hero.tagline": "Mobile-first trilingual official websites built for Macau local merchants",
-        "hero.subtitle": "We help Macau local merchants build modern official websites with mobile-first design, Traditional Chinese / English / Portuguese, and WhatsApp booking integration to boost online presence and customer trust.",
+        "hero.tagline": "Mobile-First Websites Built for Modern Businesses",
+        "hero.subtitle": "Clean, fast, responsive websites that help modern businesses grow — no clutter, just results.",
         "services.title": "Our Services",
-        "services.subtitle": "Digital solutions focused on Macau local merchants",
-        "service1.title": "Mobile-First Responsive Design",
-        "service1.desc": "Designed mobile-first with progressive enhancement for tablet and desktop — smooth on every device.",
-        "service2.title": "Trilingual Localisation",
-        "service2.desc": "One-tap switching between Traditional Chinese, English and Portuguese to suit Macau's multilingual habits.",
-        "service3.title": "WhatsApp Booking & Map Integration",
-        "service3.desc": "Integrated WhatsApp floating booking button, Google Maps and SEO structured data.",
-        "footer.rights": "© 2026 Macau Local Merchant Web Studio. All rights reserved."
+        "services.subtitle": "Everything you need to launch a modern web presence",
+        "service1.title": "Mobile-First RWD",
+        "service1.desc": "Responsive layouts designed mobile-first and progressively enhanced for tablet and desktop.",
+        "service2.title": "Multilingual Localization",
+        "service2.desc": "Built-in language switching so your content speaks to every customer.",
+        "service3.title": "Instant Booking & Maps Integration",
+        "service3.desc": "WhatsApp booking, Google Maps and structured data baked in from day one.",
+        "contact.title": "Get in Touch",
+        "contact.subtitle": "Tell us about your project — we'll get back to you.",
+        "footer.rights": "© 2026 Stride Web Co. All rights reserved."
+      },
+      "zh-Hant": {
+        "page.title": "Stride Web Co — 為現代企業打造手機優先網站",
+        "lang.label": "選擇語言",
+        "hero.tagline": "為現代企業打造的手機優先網站",
+        "hero.subtitle": "簡潔、快速、響應式的網站，協助現代企業成長——沒有雜亂，只有成果。",
+        "services.title": "我們的服務",
+        "services.subtitle": "建立現代化網路形象所需的一切",
+        "service1.title": "手機優先響應式設計",
+        "service1.desc": "以手機為核心設計的響應式版面，並逐步增強至平板與桌面。",
+        "service2.title": "多語系在地化",
+        "service2.desc": "內建語言切換，讓您的內容與每一位客戶溝通。",
+        "service3.title": "即時預約與地圖整合",
+        "service3.desc": "WhatsApp 預約、Google 地圖與結構化資料，開站即內建。",
+        "contact.title": "與我們聯絡",
+        "contact.subtitle": "告訴我們您的專案——我們會盡快回覆。",
+        "footer.rights": "© 2026 Stride Web Co. 版權所有。"
       },
       "pt": {
-        "page.title": "Estúdio Web para Comerciantes Locais de Macau",
-        "brand.name": "Estúdio Web para Comerciantes de Macau",
+        "page.title": "Stride Web Co — Sites mobile-first para negócios modernos",
         "lang.label": "Selecionar idioma",
-        "hero.tagline": "Websites oficiais trilíngues e mobile-first para comerciantes locais de Macau",
-        "hero.subtitle": "Ajudamos comerciantes locais de Macau a criar websites oficiais modernos, com design mobile-first, chinês tradicional / inglês / português e integração com WhatsApp para marcações.",
+        "hero.tagline": "Sites mobile-first criados para negócios modernos",
+        "hero.subtitle": "Sites limpos, rápidos e responsivos que ajudam negócios modernos a crescer — sem ruído, apenas resultados.",
         "services.title": "Os Nossos Serviços",
-        "services.subtitle": "Soluções digitais focadas nos comerciantes locais de Macau",
+        "services.subtitle": "Tudo o que precisa para lançar uma presença web moderna",
         "service1.title": "Design Responsivo Mobile-First",
-        "service1.desc": "Design centrado no telemóvel, com melhoramento progressivo para tablet e desktop — fluido em qualquer dispositivo.",
-        "service2.title": "Localização Trilíngue",
-        "service2.desc": "Alternância instantânea entre chinês tradicional, inglês e português, adequada aos hábitos multilingues de Macau.",
-        "service3.title": "Marcação via WhatsApp & Integração de Mapa",
-        "service3.desc": "Botão flutuante de marcação via WhatsApp, Google Maps e dados estruturados para SEO.",
-        "footer.rights": "© 2026 Estúdio Web para Comerciantes Locais de Macau. Todos os direitos reservados."
+        "service1.desc": "Layouts responsivos desenhados para telemóvel, com melhoramento progressivo para tablet e desktop.",
+        "service2.title": "Localização Multilingue",
+        "service2.desc": "Alternância de idioma integrada para que o seu conteúdo fale com cada cliente.",
+        "service3.title": "Marcação Instantânea & Integração de Mapas",
+        "service3.desc": "Marcação via WhatsApp, Google Maps e dados estruturados integrados desde o início.",
+        "contact.title": "Entre em Contacto",
+        "contact.subtitle": "Fale-nos do seu projeto — responderemos em breve.",
+        "footer.rights": "© 2026 Stride Web Co. Todos os direitos reservados."
       }
     };
 
     function applyLanguage(lang) {
-      if (!translations[lang]) { lang = "zh-Hant"; }
+      if (!translations[lang]) { lang = "en"; }
 
       document.documentElement.lang = lang;
       if (translations[lang]["page.title"]) {
@@ -302,9 +353,9 @@
     }
 
     function initLanguage() {
-      var saved = "zh-Hant";
+      var saved = "en";
       try {
-        saved = localStorage.getItem("lang") || "zh-Hant";
+        saved = localStorage.getItem("lang") || "en";
       } catch (e) {}
       applyLanguage(saved);
     }

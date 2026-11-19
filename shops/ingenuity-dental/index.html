@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artisan Dental | 澳門專業牙科診所</title>
-  <meta name="description" content="Artisan Dental（匠心牙科）位於澳門宋玉生廣場258號建興龍廣場9樓B座，提供人工植牙、齒列矯正、全口重建、冷光美白、精密假牙、牙周病治療、根管治療、補牙、兒童牙科及家庭牙醫服務，Google 5.0 星滿分評價，採預約優先制，歡迎透過 WhatsApp 預約。">
-  <meta property="og:title" content="Artisan Dental | 澳門專業牙科診所">
-  <meta property="og:description" content="Artisan Dental（匠心牙科）位於澳門宋玉生廣場258號建興龍廣場9樓B座，人工植牙、齒列矯正、冷光美白等全方位牙科服務，Google 5.0 星滿分評價，WhatsApp 預約優先。">
+  <title>匠心牙科中心 Artisan Dental | 澳門專業牙科診所</title>
+  <meta name="description" content="匠心牙科中心 Artisan Dental（ArtisanDental.mo）位於澳門皇朝建興龍廣場9樓B座，提供專業優質牙科服務：人工植牙、齒列矯正、全口重建、冷光美白、精密假牙、牙周病治療、根管治療、補牙、兒童牙科及家庭牙醫；環境溫馨、前台親切有禮、備有迎賓飲品、不硬銷、洗牙溫和、兒童看牙有扭蛋獎勵、無障礙設施，Google 5.0 星滿分評價，採預約優先制。">
+  <meta property="og:title" content="匠心牙科中心 Artisan Dental | 澳門專業牙科診所">
+  <meta property="og:description" content="匠心牙科中心 Artisan Dental（ArtisanDental.mo）位於澳門皇朝建興龍廣場9樓B座，提供專業優質牙科服務，人工植牙、齒列矯正、冷光美白等全方位項目，Google 5.0 星滿分評價，WhatsApp 預約優先。">
+  <meta property="og:image" content="https://cheangiotou238-star.github.io/macau-web-demo/shops/ingenuity-dental/assets/brand-logo.jpg">
+  <meta property="og:image:alt" content="匠心牙科中心 Artisan Dental 品牌標誌">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_Hant">
   <meta property="og:url" content="https://cheangiotou238-star.github.io/macau-web-demo/shops/ingenuity-dental/">
@@ -16,11 +18,12 @@
     "@type": ["LocalBusiness", "Dentist"],
     "name": "Artisan Dental",
     "alternateName": "匠心牙科中心",
+    "description": "提供專業優質牙科服務的牙醫及牙科診所",
     "telephone": "+85368254553",
     "email": "artisandental.macau@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "澳門宋玉生廣場258號建興龍廣場9樓B座",
+      "streetAddress": "皇朝建興龍廣場9樓B座",
       "addressLocality": "澳門",
       "addressCountry": "MO"
     },
@@ -28,6 +31,7 @@
     "url": "https://cheangiotou238-star.github.io/macau-web-demo/shops/ingenuity-dental/",
     "sameAs": [
       "https://www.facebook.com/ArtisanDental.Macau/",
+      "https://m.me/ArtisanDental.Macau",
       "https://www.instagram.com/artisandental.mo/"
     ],
     "aggregateRating": {
@@ -287,19 +291,26 @@
     .about-text { color: var(--color-text-muted); }
     .about-text p + p { margin-top: 1rem; }
 
-    .about-image {
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
+    .brand-figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
     }
 
-    .about-image img {
+    .brand-logo {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      aspect-ratio: 4 / 3;
-      display: block;
+      max-width: 300px;
+      height: auto;
       border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      background: #ffffff;
+    }
+
+    .brand-caption {
+      text-align: center;
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
     }
 
     @media (min-width: 768px) {
@@ -440,10 +451,11 @@
     .contact-item span,
     .contact-item a { color: var(--color-text-muted); text-decoration: none; }
 
-    .copy-address {
+    .copy-address,
+    .copy-btn {
       align-self: flex-start;
       margin-top: 0.35rem;
-      min-height: 40px;
+      min-height: 44px;
       padding: 0.4rem 0.85rem;
       border: 1px solid var(--color-primary);
       border-radius: 8px;
@@ -456,9 +468,11 @@
       transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
     }
 
-    .copy-address:hover { background: var(--color-primary-light); }
+    .copy-address:hover,
+    .copy-btn:hover { background: var(--color-primary-light); }
 
-    .copy-address.copied {
+    .copy-address.copied,
+    .copy-btn.copied {
       background: var(--color-accent);
       border-color: var(--color-accent);
       color: #ffffff;
@@ -663,6 +677,88 @@
       margin-bottom: 1rem;
     }
 
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      margin: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      display: block;
+    }
+
+    .gallery-item--wide { grid-column: 1 / -1; }
+
+    .gallery-item figcaption {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      text-align: center;
+    }
+
+    .gallery-source {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+    }
+
+    @media (min-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Booking & consultation */
+    .booking-intro {
+      max-width: 760px;
+      margin: 0 auto 1.75rem;
+      text-align: center;
+      color: var(--color-text-muted);
+    }
+
+    .channel-grid {
+      display: grid;
+      gap: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .channel-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+
+    .channel-card strong { font-size: 1.05rem; }
+    .channel-card p { color: var(--color-text-muted); font-size: 0.9rem; }
+    .channel-card .btn,
+    .channel-card .copy-btn { width: 100%; margin-top: auto; }
+
+    @media (min-width: 768px) {
+      .channel-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       * { transition: none !important; animation: none !important; }
@@ -673,13 +769,14 @@
 <body>
   <header class="site-header">
     <div class="container navbar">
-      <a class="brand" href="#hero" data-i18n="brand.name">Artisan Dental</a>
+      <a class="brand" href="#hero" data-i18n="brand.name">匠心牙科中心</a>
       <nav class="site-nav" id="site-nav" data-i18n-aria="nav.label" aria-label="主要導覽">
         <ul>
           <li><a href="#about" data-i18n="nav.about">關於我們</a></li>
+          <li><a href="#gallery" data-i18n="nav.gallery">診所分享</a></li>
           <li><a href="#services" data-i18n="nav.services">服務項目</a></li>
           <li><a href="#reviews" data-i18n="nav.reviews">顧客好評</a></li>
-          <li><a href="#pricing" data-i18n="nav.pricing">價目/預約</a></li>
+          <li><a href="#booking" data-i18n="nav.booking">預約與諮詢</a></li>
           <li><a href="#contact" data-i18n="nav.contact">聯絡與地圖</a></li>
         </ul>
       </nav>
@@ -700,9 +797,9 @@
   <main>
     <section id="hero" class="hero">
       <div class="container hero-inner">
-        <span class="hero-tagline" data-i18n="hero.tagline">ArtisanDental.mo · 澳門專業牙科診所</span>
-        <h1 data-i18n="hero.title">Artisan Dental</h1>
-        <p data-i18n="hero.subtitle">人工植牙、齒列矯正、全口重建等全方位牙科服務，Google 5.0 星滿分評價，採預約優先制，細心守護您的笑容。</p>
+        <span class="hero-tagline" data-i18n="hero.tagline">Artisan Dental · ArtisanDental.mo · 澳門專業牙科診所</span>
+        <h1 data-i18n="hero.title">匠心牙科中心</h1>
+        <p data-i18n="hero.subtitle">提供專業優質牙科服務，涵蓋人工植牙、齒列矯正、全口重建等全方位項目；環境溫馨、不硬銷，採預約優先制，細心守護您的笑容。</p>
         <a class="btn btn-primary" href="https://wa.me/85368254553" data-i18n="hero.cta">WhatsApp 立即預約</a>
       </div>
     </section>
@@ -712,18 +809,53 @@
         <h2 class="section-title" data-i18n="about.title">關於我們</h2>
         <div class="about-grid">
           <div class="about-text">
-            <p data-i18n="about.text1">Artisan Dental 坐落於澳門宋玉生廣場258號建興龍廣場9樓B座，秉持「以匠心守護每一顆牙齒」的理念，提供人工植牙、齒列矯正、全口重建等全方位牙科服務。</p>
-            <p data-i18n="about.text2">我們注重細心與專業的醫療品質，設有無障礙設施，並採預約優先制，讓每位顧客都能在舒適安心的環境中獲得妥善照護。</p>
-            <p data-i18n="about.text3">Google 5.0 星滿分評價，是街坊與家庭信賴的牙科夥伴。</p>
+            <p data-i18n="about.text1">匠心牙科中心 Artisan Dental（ArtisanDental.mo）位於澳門皇朝建興龍廣場9樓B座，秉持「提供專業優質牙科服務」的理念，提供人工植牙、齒列矯正、全口重建等全方位牙科服務。</p>
+            <p data-i18n="about.text2">我們重視每一位顧客的看診體驗：環境溫馨、前台親切有禮，備有各式花茶、水與咖啡等迎賓飲品；堅持不硬銷，洗牙過程溫和，兒童看牙還有扭蛋獎勵，並設有無障礙設施，讓每位顧客都能安心舒適地接受照護。</p>
+            <p data-i18n="about.text3">所有治療方案與相關安排（含收費）需依個別情況，經醫師檢查評估後與您詳細溝通確認，採預約優先制。</p>
           </div>
-          <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
-                 srcset="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80 1200w"
-                 sizes="(max-width: 767px) 100vw, 50vw"
-                 alt="Artisan Dental 診所環境" data-i18n-alt="about.imageAlt"
-                 width="1200" height="900" loading="lazy" decoding="async">
-          </div>
+          <figure class="brand-figure">
+            <img class="brand-logo" src="./assets/brand-logo.jpg" alt="匠心牙科中心 Artisan Dental 品牌標誌" data-i18n-alt="about.imageAlt" width="548" height="1159" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none';">
+            <figcaption class="brand-caption" data-i18n="about.brandCaption">品牌標誌 · 匠心牙科中心 Artisan Dental</figcaption>
+          </figure>
         </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <h2 class="section-title" data-i18n="gallery.title">診所分享與環境</h2>
+        <p class="section-subtitle" data-i18n="gallery.subtitle">走進匠心牙科，感受溫馨舒適的看診環境</p>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-item--wide">
+            <img src="./assets/clinic-environment.jpg" alt="匠心牙科中心診所環境" data-i18n-alt="gallery.alt.environment" width="2048" height="1536" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none';">
+            <figcaption data-i18n="gallery.caption.environment">診所環境</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/clinic-photo-1.jpg" alt="匠心牙科中心診所分享照片" data-i18n-alt="gallery.alt.share" width="1536" height="2048" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none';">
+            <figcaption data-i18n="gallery.caption.share">診所日常分享</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/clinic-photo-2.jpg" alt="匠心牙科中心診所分享照片" data-i18n-alt="gallery.alt.share" width="1440" height="1920" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none';">
+            <figcaption data-i18n="gallery.caption.share">診所日常分享</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/clinic-photo-3.jpg" alt="匠心牙科中心診所分享照片" data-i18n-alt="gallery.alt.share" width="1440" height="1920" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none';">
+            <figcaption data-i18n="gallery.caption.share">診所日常分享</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/clinic-photo-4.jpg" alt="匠心牙科中心診所分享照片" data-i18n-alt="gallery.alt.share" width="1536" height="2048" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none';">
+            <figcaption data-i18n="gallery.caption.share">診所日常分享</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/clinic-photo-5.jpg" alt="匠心牙科中心診所分享照片" data-i18n-alt="gallery.alt.share" width="1536" height="2048" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none';">
+            <figcaption data-i18n="gallery.caption.share">診所日常分享</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/clinic-photo-6.jpg" alt="匠心牙科中心診所分享照片" data-i18n-alt="gallery.alt.share" width="1536" height="2048" loading="lazy" decoding="async" onerror="this.closest('figure').style.display='none';">
+            <figcaption data-i18n="gallery.caption.share">診所日常分享</figcaption>
+          </figure>
+        </div>
+        <p class="gallery-source" data-i18n="gallery.source">素材引用自 Artisan Dental 官方 Facebook 專頁分享內容。</p>
       </div>
     </section>
 
@@ -788,13 +920,13 @@
         <div class="reviews">
           <article class="review-card">
             <span class="stars" aria-hidden="true">★★★★★</span>
-            <p class="review-text" data-i18n="review1.text">醫師非常細心專業，植牙過程清楚說明，環境舒適又乾淨，讓人非常安心。</p>
-            <p class="review-author" data-i18n="review1.author">陳小姐 · 人工植牙</p>
+            <p class="review-text" data-i18n="review1.text">環境溫馨舒適，前台親切有禮，還貼心準備花茶、水和咖啡迎賓飲品；醫師不硬銷，洗牙過程溫和，讓人非常安心。</p>
+            <p class="review-author" data-i18n="review1.author">陳小姐 · 洗牙 / 定期檢查</p>
           </article>
           <article class="review-card">
             <span class="stars" aria-hidden="true">★★★★★</span>
-            <p class="review-text" data-i18n="review2.text">帶小朋友看牙完全不會怕，醫生很有耐心，冷光美白效果也很滿意。</p>
-            <p class="review-author" data-i18n="review2.author">李先生 · 兒童牙科 / 冷光美白</p>
+            <p class="review-text" data-i18n="review2.text">帶小朋友來完全不會怕，醫生很有耐心，看完牙還能扭蛋拿小獎勵，孩子超開心！</p>
+            <p class="review-author" data-i18n="review2.author">李先生 · 兒童牙科</p>
           </article>
           <article class="review-card">
             <span class="stars" aria-hidden="true">★★★★★</span>
@@ -805,38 +937,30 @@
       </div>
     </section>
 
-    <section id="pricing">
+    <section id="booking">
       <div class="container">
-        <h2 class="section-title" data-i18n="pricing.title">價目/預約</h2>
-        <p class="section-subtitle" data-i18n="pricing.subtitle">採預約優先制，收費以現場評估為準</p>
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th scope="col" data-i18n="pricing.colItem">項目</th>
-              <th scope="col" data-i18n="pricing.colPrice">收費</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n="price1.name">初診口腔檢查</td>
-              <td class="price-value" data-i18n="price1.value">預約報價</td>
-            </tr>
-            <tr>
-              <td data-i18n="price2.name">專業洗牙</td>
-              <td class="price-value" data-i18n="price2.value">預約報價</td>
-            </tr>
-            <tr>
-              <td data-i18n="price3.name">冷光美白</td>
-              <td class="price-value" data-i18n="price3.value">預約報價</td>
-            </tr>
-            <tr>
-              <td data-i18n="price4.name">人工植牙</td>
-              <td class="price-value" data-i18n="price4.value">預約報價</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="booking-cta">
-          <a class="btn btn-secondary" href="https://wa.me/85368254553" target="_blank" rel="noopener" data-i18n="pricing.cta">WhatsApp 預約諮詢</a>
+        <h2 class="section-title" data-i18n="booking.title">預約與諮詢</h2>
+        <p class="section-subtitle" data-i18n="booking.subtitle">採預約優先制 · 治療方案依個別情況與醫師溝通確認</p>
+        <div class="booking-intro">
+          <p data-i18n="booking.intro">我們堅持不硬銷，所有治療方案與相關安排（含收費）均需依個別口腔狀況，經醫師檢查評估後與您詳細溝通確認。歡迎透過以下任一管道預約或諮詢：</p>
+        </div>
+        <div class="channel-grid">
+          <div class="channel-card">
+            <strong data-i18n="booking.channel.whatsapp.title">WhatsApp 預約</strong>
+            <p data-i18n="booking.channel.whatsapp.desc">直接傳送訊息，由前台為您安排合適時段。</p>
+            <a class="btn btn-secondary" href="https://wa.me/85368254553" target="_blank" rel="noopener" data-i18n="booking.channel.whatsapp.cta">開啟 WhatsApp 預約</a>
+          </div>
+          <div class="channel-card">
+            <strong data-i18n="booking.channel.wechat.title">WeChat 諮詢</strong>
+            <p data-i18n="booking.channel.wechat.desc">微訊號：ArtisanDental</p>
+            <button type="button" class="copy-btn" data-copy-wechat data-i18n="booking.wechat.copyId">複製微訊號</button>
+            <button type="button" class="copy-btn" data-copy-wechat-booking data-i18n="booking.wechat.copyText">複製預約內容</button>
+          </div>
+          <div class="channel-card">
+            <strong data-i18n="booking.channel.email.title">Email 預約</strong>
+            <p data-i18n="booking.channel.email.desc">artisandental.macau@gmail.com</p>
+            <a class="btn btn-secondary" href="mailto:artisandental.macau@gmail.com" data-i18n="booking.channel.email.cta">寄送 Email 預約</a>
+          </div>
         </div>
 
         <div class="booking-form">
@@ -888,16 +1012,30 @@
           <div class="contact-info">
             <div class="contact-item">
               <strong data-i18n="contact.address.label">地址</strong>
-              <span id="contact-address-value" data-i18n="contact.address.value">澳門宋玉生廣場258號建興龍廣場9樓B座</span>
+              <span id="contact-address-value" data-i18n="contact.address.value">澳門皇朝建興龍廣場9樓B座</span>
               <button class="copy-address" id="copy-address" type="button" data-i18n="contact.copyAddress">複製地址</button>
             </div>
             <div class="contact-item">
               <strong data-i18n="contact.phone.label">電話 / WhatsApp</strong>
               <a href="tel:+85368254553" data-i18n="contact.phone.value">+853 6825 4553</a>
+              <button class="copy-btn" id="copy-phone" type="button" data-i18n="contact.copyPhone">複製電話</button>
             </div>
             <div class="contact-item">
               <strong data-i18n="contact.email.label">電子郵件</strong>
               <a href="mailto:artisandental.macau@gmail.com">artisandental.macau@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <strong data-i18n="contact.wechat.label">WeChat</strong>
+              <span data-i18n="contact.wechat.value">ArtisanDental</span>
+              <button class="copy-btn" id="copy-wechat" type="button" data-copy-wechat data-i18n="contact.wechat.copy">複製微訊號</button>
+            </div>
+            <div class="contact-item">
+              <strong data-i18n="contact.messenger.label">Facebook / Messenger</strong>
+              <a href="https://www.facebook.com/ArtisanDental.Macau/" target="_blank" rel="noopener" data-i18n="contact.messenger.value">匠心牙科中心</a>
+            </div>
+            <div class="contact-item">
+              <strong data-i18n="contact.instagram.label">Instagram</strong>
+              <a href="https://www.instagram.com/artisandental.mo/" target="_blank" rel="noopener" data-i18n="contact.instagram.value">ArtisanDental.mo</a>
             </div>
             <div class="contact-item">
               <strong data-i18n="contact.hours.label">營業時間</strong>
@@ -906,11 +1044,6 @@
             <div class="contact-item">
               <strong data-i18n="contact.accessibility.label">設施</strong>
               <span data-i18n="contact.accessibility.value">無障礙設施</span>
-            </div>
-            <div class="social-links" role="group" data-i18n-aria="social.title" aria-label="社交平台">
-              <span class="social-label" data-i18n="social.label">關注我們</span>
-              <a class="social-btn facebook" href="https://www.facebook.com/ArtisanDental.Macau/" target="_blank" rel="noopener" data-i18n-aria="social.facebook.aria" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
-              <a class="social-btn instagram" href="https://www.instagram.com/artisandental.mo/" target="_blank" rel="noopener" data-i18n-aria="social.instagram.aria" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
             </div>
           </div>
           <iframe class="map-frame" src="https://www.google.com/maps?q=%E6%BE%B3%E9%96%80%E5%AE%8B%E7%8E%89%E7%94%9F%E5%BB%A3%E5%A0%B4258%E8%99%9F%E5%BB%BA%E8%88%88%E9%BE%8D%E5%BB%A3%E5%A0%B49%E6%A8%93B%E5%BA%A7&output=embed" title="Artisan Dental 地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -925,7 +1058,7 @@
         <a class="social-btn facebook" href="https://www.facebook.com/ArtisanDental.Macau/" target="_blank" rel="noopener" data-i18n-aria="social.facebook.aria" aria-label="Facebook"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg></a>
         <a class="social-btn instagram" href="https://www.instagram.com/artisandental.mo/" target="_blank" rel="noopener" data-i18n-aria="social.instagram.aria" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
       </div>
-      <p data-i18n="footer.rights">© 2026 Artisan Dental。版權所有。</p>
+      <p data-i18n="footer.rights">© 2026 匠心牙科中心 Artisan Dental。版權所有。</p>
     </div>
   </footer>
 
@@ -948,17 +1081,17 @@
       "nav.about": "關於我們",
       "nav.services": "服務項目",
       "nav.reviews": "顧客好評",
-      "nav.pricing": "價目/預約",
+      "nav.gallery": "診所分享",
       "nav.contact": "聯絡與地圖",
-      "hero.tagline": "ArtisanDental.mo · 澳門專業牙科診所",
-      "hero.title": "Artisan Dental",
-      "hero.subtitle": "人工植牙、齒列矯正、全口重建等全方位牙科服務，Google 5.0 星滿分評價，採預約優先制，細心守護您的笑容。",
+      "hero.tagline": "Artisan Dental · ArtisanDental.mo · 澳門專業牙科診所",
+      "hero.title": "匠心牙科中心",
+      "hero.subtitle": "提供專業優質牙科服務，涵蓋人工植牙、齒列矯正、全口重建等全方位項目；環境溫馨、不硬銷，採預約優先制，細心守護您的笑容。",
       "hero.cta": "WhatsApp 立即預約",
       "about.title": "關於我們",
-      "about.text1": "Artisan Dental 坐落於澳門宋玉生廣場258號建興龍廣場9樓B座，秉持「以匠心守護每一顆牙齒」的理念，提供人工植牙、齒列矯正、全口重建等全方位牙科服務。",
-      "about.text2": "我們注重細心與專業的醫療品質，設有無障礙設施，並採預約優先制，讓每位顧客都能在舒適安心的環境中獲得妥善照護。",
-      "about.text3": "Google 5.0 星滿分評價，是街坊與家庭信賴的牙科夥伴。",
-      "about.imageAlt": "Artisan Dental 診所環境",
+      "about.text1": "匠心牙科中心 Artisan Dental（ArtisanDental.mo）位於澳門皇朝建興龍廣場9樓B座，秉持「提供專業優質牙科服務」的理念，提供人工植牙、齒列矯正、全口重建等全方位牙科服務。",
+      "about.text2": "我們重視每一位顧客的看診體驗：環境溫馨、前台親切有禮，備有各式花茶、水與咖啡等迎賓飲品；堅持不硬銷，洗牙過程溫和，兒童看牙還有扭蛋獎勵，並設有無障礙設施，讓每位顧客都能安心舒適地接受照護。",
+      "about.text3": "所有治療方案與相關安排（含收費）需依個別情況，經醫師檢查評估後與您詳細溝通確認，採預約優先制。",
+      "about.imageAlt": "匠心牙科中心 Artisan Dental 品牌標誌",
       "about.imagePlaceholder": "診所環境圖片（示範）",
       "services.title": "服務項目",
       "services.subtitle": "全方位專業牙科服務",
@@ -986,10 +1119,10 @@
       "reviews.subtitle": "Google 5.0 星滿分評價",
       "reviews.ratingAria": "Google 5.0 星滿分評價",
       "reviews.ratingSource": "Google 顧客評價",
-      "review1.text": "醫師非常細心專業，植牙過程清楚說明，環境舒適又乾淨，讓人非常安心。",
-      "review1.author": "陳小姐 · 人工植牙",
-      "review2.text": "帶小朋友看牙完全不會怕，醫生很有耐心，冷光美白效果也很滿意。",
-      "review2.author": "李先生 · 兒童牙科 / 冷光美白",
+      "review1.text": "環境溫馨舒適，前台親切有禮，還貼心準備花茶、水和咖啡迎賓飲品；醫師不硬銷，洗牙過程溫和，讓人非常安心。",
+      "review1.author": "陳小姐 · 洗牙 / 定期檢查",
+      "review2.text": "帶小朋友來完全不會怕，醫生很有耐心，看完牙還能扭蛋拿小獎勵，孩子超開心！",
+      "review2.author": "李先生 · 兒童牙科",
       "review3.text": "無障礙設施完善，長輩看牙很方便，預約制免久候，值得推薦的專業牙科。",
       "review3.author": "黃小姐 · 家庭牙醫",
       "pricing.title": "價目/預約",
@@ -1007,7 +1140,7 @@
       "pricing.cta": "WhatsApp 預約諮詢",
       "contact.title": "聯絡與地圖",
       "contact.address.label": "地址",
-      "contact.address.value": "澳門宋玉生廣場258號建興龍廣場9樓B座",
+      "contact.address.value": "澳門皇朝建興龍廣場9樓B座",
       "contact.phone.label": "電話 / WhatsApp",
       "contact.phone.value": "+853 6825 4553",
       "contact.email.label": "電子郵件",
@@ -1017,7 +1150,7 @@
       "contact.hours.value": "星期一至星期日 10:00 – 19:00",
       "contact.accessibility.label": "設施",
       "contact.accessibility.value": "無障礙設施",
-      "footer.rights": "© 2026 Artisan Dental。版權所有。",
+      "footer.rights": "© 2026 匠心牙科中心 Artisan Dental。版權所有。",
       "whatsapp.aria": "透過 WhatsApp 預約",
       "form.title": "線上快速預約",
       "form.subtitle": "填寫資料後，將直接透過 WhatsApp 或 Email 傳送預約給我們",
@@ -1037,6 +1170,38 @@
       "form.email": "改用 Email 傳送預約",
       "form.required": "請填寫姓名、聯絡電話並選擇預約項目",
       "form.msgTitle": "線上預約申請",
+      "nav.booking": "預約與諮詢",
+      "about.brandCaption": "品牌標誌 · 匠心牙科中心 Artisan Dental",
+      "gallery.title": "診所分享與環境",
+      "gallery.subtitle": "走進匠心牙科，感受溫馨舒適的看診環境",
+      "gallery.alt.environment": "匠心牙科中心診所環境",
+      "gallery.alt.share": "匠心牙科中心診所分享照片",
+      "gallery.caption.environment": "診所環境",
+      "gallery.caption.share": "診所日常分享",
+      "gallery.source": "素材引用自 Artisan Dental 官方 Facebook 專頁分享內容。",
+      "booking.title": "預約與諮詢",
+      "booking.subtitle": "採預約優先制 · 治療方案依個別情況與醫師溝通確認",
+      "booking.intro": "我們堅持不硬銷，所有治療方案與相關安排（含收費）均需依個別口腔狀況，經醫師檢查評估後與您詳細溝通確認。歡迎透過以下任一管道預約或諮詢：",
+      "booking.channel.whatsapp.title": "WhatsApp 預約",
+      "booking.channel.whatsapp.desc": "直接傳送訊息，由前台為您安排合適時段。",
+      "booking.channel.whatsapp.cta": "開啟 WhatsApp 預約",
+      "booking.channel.wechat.title": "WeChat 諮詢",
+      "booking.channel.wechat.desc": "微訊號：ArtisanDental",
+      "booking.wechat.copyId": "複製微訊號",
+      "booking.wechat.copyText": "複製預約內容",
+      "booking.wechat.bookingText": "您好，我想預約匠心牙科中心 Artisan Dental 的牙科服務，請協助安排，謝謝！",
+      "booking.channel.email.title": "Email 預約",
+      "booking.channel.email.desc": "artisandental.macau@gmail.com",
+      "booking.channel.email.cta": "寄送 Email 預約",
+      "contact.copyPhone": "複製電話",
+      "contact.wechat.label": "WeChat",
+      "contact.wechat.value": "ArtisanDental",
+      "contact.wechat.copy": "複製微訊號",
+      "contact.messenger.label": "Facebook / Messenger",
+      "contact.messenger.value": "匠心牙科中心",
+      "contact.instagram.label": "Instagram",
+      "contact.instagram.value": "ArtisanDental.mo",
+      "contact.copy.success": "已複製",
       "social.label": "關注我們",
       "social.title": "社交平台",
       "social.facebook.aria": "Facebook",
@@ -1050,17 +1215,17 @@
       "nav.about": "About Us",
       "nav.services": "Services",
       "nav.reviews": "Reviews",
-      "nav.pricing": "Pricing & Booking",
+      "nav.gallery": "Clinic Gallery",
       "nav.contact": "Contact & Map",
-      "hero.tagline": "ArtisanDental.mo · Professional Dental Clinic in Macau",
+      "hero.tagline": "Artisan Dental · ArtisanDental.mo · Professional Dental Clinic in Macau",
       "hero.title": "Artisan Dental",
-      "hero.subtitle": "Comprehensive dental care including implants, orthodontics and full mouth reconstruction — rated 5.0 stars on Google, with appointment-first service that cares for your smile.",
+      "hero.subtitle": "Providing professional, high-quality dental care including implants, orthodontics and full mouth reconstruction — a warm environment with no hard selling, appointment-first to care for your smile.",
       "hero.cta": "Book via WhatsApp",
       "about.title": "About Us",
-      "about.text1": "Located at Unit B, 9/F, Kin Heng Long Plaza, No. 258 Alameda Dr. Carlos d'Assumpção, Macau, Artisan Dental upholds the philosophy of \"crafting care for every tooth\", offering dental implants, orthodontics, full mouth reconstruction and more.",
-      "about.text2": "We focus on attentive and professional medical quality, provide barrier-free facilities, and operate on an appointment-first basis so every patient receives proper care in a comfortable environment.",
-      "about.text3": "Rated 5.0 stars on Google, we are a trusted dental partner for neighbours and families.",
-      "about.imageAlt": "Artisan Dental clinic environment",
+      "about.text1": "Artisan Dental (ArtisanDental.mo) is located at Unit B, 9/F, Kin Heng Long Plaza, NAPE, Macau. Guided by the mission of \"providing professional, high-quality dental services\", we offer dental implants, orthodontics, full mouth reconstruction and more.",
+      "about.text2": "We care about every patient's experience: a warm environment, friendly and courteous reception, and welcome drinks including herbal tea, water and coffee. We never hard-sell, our teeth cleaning is gentle, children receive gashapon rewards after treatment, and barrier-free facilities are available — so every patient feels comfortable and at ease.",
+      "about.text3": "All treatment plans and arrangements (including fees) depend on individual circumstances and will be confirmed with you after examination and assessment by the dentist. We operate on an appointment-first basis.",
+      "about.imageAlt": "Artisan Dental brand logo",
       "about.imagePlaceholder": "Clinic image (demo)",
       "services.title": "Services",
       "services.subtitle": "Comprehensive professional dental care",
@@ -1088,10 +1253,10 @@
       "reviews.subtitle": "5.0-star rating on Google",
       "reviews.ratingAria": "Google 5.0 star rating",
       "reviews.ratingSource": "Google customer reviews",
-      "review1.text": "The dentist is very attentive and professional, explained the implant process clearly, and the clinic is comfortable and clean — very reassuring.",
-      "review1.author": "Ms. Chan · Dental Implants",
-      "review2.text": "My child isn't afraid of the dentist here — the doctor is very patient, and the whitening results are great too.",
-      "review2.author": "Mr. Lee · Pediatric Dentistry / Whitening",
+      "review1.text": "Warm and comfortable environment, friendly reception, and thoughtful welcome drinks with herbal tea, water and coffee. No hard selling and gentle teeth cleaning — very reassuring.",
+      "review1.author": "Ms. Chan · Cleaning / Check-up",
+      "review2.text": "My child isn't afraid of the dentist here — the doctor is very patient, and kids get gashapon rewards after treatment. My child was so happy!",
+      "review2.author": "Mr. Lee · Pediatric Dentistry",
       "review3.text": "Barrier-free facilities are excellent, making it easy for elderly patients. Appointment-only means no long waits — highly recommended.",
       "review3.author": "Ms. Wong · Family Dentistry",
       "pricing.title": "Pricing & Booking",
@@ -1109,7 +1274,7 @@
       "pricing.cta": "WhatsApp Enquiry",
       "contact.title": "Contact & Map",
       "contact.address.label": "Address",
-      "contact.address.value": "Unit B, 9/F, Kin Heng Long Plaza, No. 258 Alameda Dr. Carlos d'Assumpção, Macau",
+      "contact.address.value": "Unit B, 9/F, Kin Heng Long Plaza, NAPE, Macau",
       "contact.phone.label": "Phone / WhatsApp",
       "contact.phone.value": "+853 6825 4553",
       "contact.email.label": "Email",
@@ -1139,6 +1304,38 @@
       "form.email": "Send Booking via Email",
       "form.required": "Please fill in your name and phone, and select a service",
       "form.msgTitle": "Online Booking Request",
+      "nav.booking": "Booking & Consultation",
+      "about.brandCaption": "Brand logo · Artisan Dental",
+      "gallery.title": "Clinic Sharing & Environment",
+      "gallery.subtitle": "Step inside Artisan Dental and experience a warm, comfortable environment",
+      "gallery.alt.environment": "Artisan Dental clinic environment",
+      "gallery.alt.share": "Artisan Dental clinic sharing photo",
+      "gallery.caption.environment": "Clinic environment",
+      "gallery.caption.share": "Daily clinic sharing",
+      "gallery.source": "Images sourced from Artisan Dental's official Facebook page.",
+      "booking.title": "Booking & Consultation",
+      "booking.subtitle": "Appointment-first · treatment plans confirmed with the dentist",
+      "booking.intro": "We never hard-sell. All treatment plans and arrangements (including fees) depend on your individual oral condition and will be confirmed with you after examination and assessment by the dentist. You are welcome to book or enquire through any of the following channels:",
+      "booking.channel.whatsapp.title": "WhatsApp Booking",
+      "booking.channel.whatsapp.desc": "Send a message and our reception will arrange a suitable time for you.",
+      "booking.channel.whatsapp.cta": "Book via WhatsApp",
+      "booking.channel.wechat.title": "WeChat Enquiry",
+      "booking.channel.wechat.desc": "WeChat ID: ArtisanDental",
+      "booking.wechat.copyId": "Copy WeChat ID",
+      "booking.wechat.copyText": "Copy booking message",
+      "booking.wechat.bookingText": "Hello, I would like to book a dental appointment at Artisan Dental. Please help me arrange it. Thank you!",
+      "booking.channel.email.title": "Email Booking",
+      "booking.channel.email.desc": "artisandental.macau@gmail.com",
+      "booking.channel.email.cta": "Book via Email",
+      "contact.copyPhone": "Copy phone",
+      "contact.wechat.label": "WeChat",
+      "contact.wechat.value": "ArtisanDental",
+      "contact.wechat.copy": "Copy WeChat ID",
+      "contact.messenger.label": "Facebook / Messenger",
+      "contact.messenger.value": "Artisan Dental (匠心牙科中心)",
+      "contact.instagram.label": "Instagram",
+      "contact.instagram.value": "ArtisanDental.mo",
+      "contact.copy.success": "Copied",
       "social.label": "Follow us",
       "social.title": "Social media",
       "social.facebook.aria": "Facebook",
@@ -1152,17 +1349,17 @@
       "nav.about": "Sobre Nós",
       "nav.services": "Serviços",
       "nav.reviews": "Avaliações",
-      "nav.pricing": "Preços & Marcação",
+      "nav.gallery": "Partilhas da Clínica",
       "nav.contact": "Contacto & Mapa",
-      "hero.tagline": "ArtisanDental.mo · Clínica dentária profissional em Macau",
+      "hero.tagline": "Artisan Dental · ArtisanDental.mo · Clínica dentária profissional em Macau",
       "hero.title": "Artisan Dental",
-      "hero.subtitle": "Cuidados dentários completos, incluindo implantes, ortodontia e reabilitação oral — avaliado com 5,0 estrelas no Google, com marcação prévia para cuidar do seu sorriso.",
+      "hero.subtitle": "Cuidados dentários profissionais e de qualidade, incluindo implantes, ortodontia e reabilitação oral — ambiente acolhedor, sem pressão de venda, com marcação prévia para cuidar do seu sorriso.",
       "hero.cta": "Marcar via WhatsApp",
       "about.title": "Sobre Nós",
-      "about.text1": "Situado na Alameda Dr. Carlos d'Assumpção n.º 258, Edifício Kin Heng Long Plaza, 9.º Andar B, Macau, a Artisan Dental mantém a filosofia de \"cuidar de cada dente com dedicação\", oferecendo implantes dentários, ortodontia, reabilitação oral e muito mais.",
-      "about.text2": "Focamo-nos numa qualidade médica atenta e profissional, dispomos de instalações acessíveis e funcionamos por marcação prévia, para que cada paciente receba cuidados adequados num ambiente confortável.",
-      "about.text3": "Com avaliação de 5,0 estrelas no Google, somos um parceiro dentário de confiança para vizinhos e famílias.",
-      "about.imageAlt": "Ambiente da clínica Artisan Dental",
+      "about.text1": "A Artisan Dental (ArtisanDental.mo) está localizada na Unidade B, 9.º andar, Kin Heng Long Plaza, NAPE, Macau. Guiados pela missão de «prestar serviços dentários profissionais e de qualidade», oferecemos implantes dentários, ortodontia, reabilitação oral e muito mais.",
+      "about.text2": "Preocupamo-nos com a experiência de cada paciente: ambiente acolhedor, receção simpática e atenciosa, e bebidas de boas-vindas como chá de ervas, água e café. Nunca fazemos vendas agressivas, a limpeza dentária é suave, as crianças recebem brindes (gashapon) após o tratamento e dispomos de instalações acessíveis — para que todos se sintam confortáveis e tranquilos.",
+      "about.text3": "Todos os planos de tratamento e respetivos custos dependem de cada caso e serão confirmados consigo após avaliação e exame pelo médico dentista. Funcionamos por marcação prévia.",
+      "about.imageAlt": "Logótipo da Artisan Dental",
       "about.imagePlaceholder": "Imagem da clínica (demonstração)",
       "services.title": "Serviços",
       "services.subtitle": "Cuidados dentários profissionais completos",
@@ -1190,10 +1387,10 @@
       "reviews.subtitle": "Avaliação de 5,0 estrelas no Google",
       "reviews.ratingAria": "Avaliação de 5,0 estrelas no Google",
       "reviews.ratingSource": "Avaliações de clientes no Google",
-      "review1.text": "O dentista é muito atencioso e profissional, explicou claramente o processo do implante, e a clínica é confortável e limpa — muito tranquilizador.",
-      "review1.author": "Sra. Chan · Implantes Dentários",
-      "review2.text": "O meu filho não tem medo do dentista aqui — o médico é muito paciente, e os resultados do branqueamento também são excelentes.",
-      "review2.author": "Sr. Lee · Odontopediatria / Branqueamento",
+      "review1.text": "Ambiente acolhedor e confortável, receção simpática e bebidas de boas-vindas com chá, água e café. Sem vendas agressivas e limpeza suave — muito tranquilizador.",
+      "review1.author": "Sra. Chan · Limpeza / Check-up",
+      "review2.text": "O meu filho não tem medo do dentista aqui — o médico é muito paciente e as crianças recebem brindes gashapon após o tratamento. O meu filho ficou muito feliz!",
+      "review2.author": "Sr. Lee · Odontopediatria",
       "review3.text": "As instalações acessíveis são excelentes, facilitando os pacientes idosos. Só por marcação, sem longas esperas — altamente recomendado.",
       "review3.author": "Sra. Wong · Medicina Dentária Familiar",
       "pricing.title": "Preços & Marcação",
@@ -1211,7 +1408,7 @@
       "pricing.cta": "Consultar via WhatsApp",
       "contact.title": "Contacto & Mapa",
       "contact.address.label": "Endereço",
-      "contact.address.value": "Alameda Dr. Carlos d'Assumpção n.º 258, Edifício Kin Heng Long Plaza, 9.º Andar B, Macau",
+      "contact.address.value": "Unidade B, 9.º andar, Kin Heng Long Plaza, NAPE, Macau",
       "contact.phone.label": "Telefone / WhatsApp",
       "contact.phone.value": "+853 6825 4553",
       "contact.email.label": "Email",
@@ -1241,6 +1438,38 @@
       "form.email": "Enviar Marcação por Email",
       "form.required": "Preencha o nome e o telefone e selecione um serviço",
       "form.msgTitle": "Pedido de Marcação Online",
+      "nav.booking": "Marcação & Consulta",
+      "about.brandCaption": "Logótipo · Artisan Dental",
+      "gallery.title": "Partilhas & Ambiente da Clínica",
+      "gallery.subtitle": "Entre na Artisan Dental e sinta um ambiente acolhedor e confortável",
+      "gallery.alt.environment": "Ambiente da clínica Artisan Dental",
+      "gallery.alt.share": "Foto partilhada pela clínica Artisan Dental",
+      "gallery.caption.environment": "Ambiente da clínica",
+      "gallery.caption.share": "Partilhas do dia a dia",
+      "gallery.source": "Imagens provenientes da página oficial de Facebook da Artisan Dental.",
+      "booking.title": "Marcação & Consulta",
+      "booking.subtitle": "Marcação prévia · planos de tratamento confirmados com o médico",
+      "booking.intro": "Nunca fazemos vendas agressivas. Todos os planos de tratamento e respetivos custos dependem da sua condição oral e serão confirmados consigo após exame e avaliação pelo médico dentista. Pode marcar ou esclarecer dúvidas através de qualquer um dos seguintes canais:",
+      "booking.channel.whatsapp.title": "Marcação via WhatsApp",
+      "booking.channel.whatsapp.desc": "Envie uma mensagem e a nossa receção marcará um horário adequado para si.",
+      "booking.channel.whatsapp.cta": "Marcar via WhatsApp",
+      "booking.channel.wechat.title": "Consulta via WeChat",
+      "booking.channel.wechat.desc": "ID WeChat: ArtisanDental",
+      "booking.wechat.copyId": "Copiar ID WeChat",
+      "booking.wechat.copyText": "Copiar mensagem de marcação",
+      "booking.wechat.bookingText": "Olá, gostaria de marcar uma consulta de medicina dentária na Artisan Dental. Por favor, ajude-me a marcar. Obrigado!",
+      "booking.channel.email.title": "Marcação via Email",
+      "booking.channel.email.desc": "artisandental.macau@gmail.com",
+      "booking.channel.email.cta": "Marcar via Email",
+      "contact.copyPhone": "Copiar telefone",
+      "contact.wechat.label": "WeChat",
+      "contact.wechat.value": "ArtisanDental",
+      "contact.wechat.copy": "Copiar ID WeChat",
+      "contact.messenger.label": "Facebook / Messenger",
+      "contact.messenger.value": "Artisan Dental (匠心牙科中心)",
+      "contact.instagram.label": "Instagram",
+      "contact.instagram.value": "ArtisanDental.mo",
+      "contact.copy.success": "Copiado",
       "social.label": "Siga-nos",
       "social.title": "Redes sociais",
       "social.facebook.aria": "Facebook",
@@ -1381,44 +1610,69 @@
         });
       }
 
+      function fallbackCopy(text) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); } catch (err) {}
+        document.body.removeChild(ta);
+      }
+
+      function copyWithFeedback(text, btn, successLabel) {
+        var showCopied = function () {
+          var original = btn.textContent;
+          btn.textContent = successLabel;
+          btn.classList.add("copied");
+          setTimeout(function () {
+            btn.textContent = original;
+            btn.classList.remove("copied");
+          }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(showCopied, function () {
+            fallbackCopy(text);
+            showCopied();
+          });
+        } else {
+          fallbackCopy(text);
+          showCopied();
+        }
+      }
+
       var copyAddressBtn = document.getElementById("copy-address");
       var addressEl = document.getElementById("contact-address-value");
       if (copyAddressBtn && addressEl) {
-        function fallbackCopy(text) {
-          var ta = document.createElement("textarea");
-          ta.value = text;
-          ta.setAttribute("readonly", "");
-          ta.style.position = "fixed";
-          ta.style.left = "-9999px";
-          document.body.appendChild(ta);
-          ta.select();
-          try { document.execCommand("copy"); } catch (err) {}
-          document.body.removeChild(ta);
-        }
-
         copyAddressBtn.addEventListener("click", function () {
           var t = translations[currentLang] || translations["zh-Hant"];
-          var text = addressEl.textContent.trim();
-          var showCopied = function () {
-            var original = copyAddressBtn.textContent;
-            copyAddressBtn.textContent = t["contact.copyAddress.success"];
-            copyAddressBtn.classList.add("copied");
-            setTimeout(function () {
-              copyAddressBtn.textContent = original;
-              copyAddressBtn.classList.remove("copied");
-            }, 2000);
-          };
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(text).then(showCopied, function () {
-              fallbackCopy(text);
-              showCopied();
-            });
-          } else {
-            fallbackCopy(text);
-            showCopied();
-          }
+          copyWithFeedback(addressEl.textContent.trim(), copyAddressBtn, t["contact.copyAddress.success"]);
         });
       }
+
+      var copyPhoneBtn = document.getElementById("copy-phone");
+      if (copyPhoneBtn) {
+        copyPhoneBtn.addEventListener("click", function () {
+          var t = translations[currentLang] || translations["zh-Hant"];
+          copyWithFeedback("+853 6825 4553", copyPhoneBtn, t["contact.copy.success"]);
+        });
+      }
+
+      document.querySelectorAll("[data-copy-wechat]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var t = translations[currentLang] || translations["zh-Hant"];
+          copyWithFeedback("ArtisanDental", btn, t["contact.copy.success"]);
+        });
+      });
+
+      document.querySelectorAll("[data-copy-wechat-booking]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var t = translations[currentLang] || translations["zh-Hant"];
+          copyWithFeedback(t["booking.wechat.bookingText"], btn, t["contact.copy.success"]);
+        });
+      });
     });
 
   })();
